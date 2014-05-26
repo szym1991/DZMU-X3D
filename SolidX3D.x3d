@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 3.3//EN" "http://www.web3d.org/specifications/x3d-3.3.dtd">
+<X3D profile='Interchange' version='3.3'  xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation =' http://www.web3d.org/specifications/x3d-3.3.xsd '>
+    <head>
+        <meta name='title' content='SolidX3D.x3d'/>
+        <meta name='description' content='Sphere geometric primitive node.'/>
+    </head> 
+    <Scene>
+        <Background groundColor='.1 .4 .1' skyColor='.8 .8 1' />
+        <Tramsform DEF='World'>
+            <Transform DEF='Chalupa' translation='1.25 .3 1.4'>
+                <Shape>
+                    <Box size='1.499 .6 .201' />
+                    <Appearance>
+                        <ImageTexture DEF='BrickTex' url='"bricks.jpg"'/>
+                        <TextureTransform scale='5 2'/>
+                    </Appearance>
+                </Shape>
+            </Transform>
+            <Viewpoint description='Book View' position='0 0 3'/>
+            <Shape>
+                <Sphere radius='0.9' />
+                <Appearance>
+                    <Material/>
+                </Appearance>
+            </Shape>
+        </Tramsform>
+    </Scene>
+</X3D> 
