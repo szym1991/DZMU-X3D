@@ -6,24 +6,46 @@
         <meta name='description' content='Sphere geometric primitive node.'/>
     </head> 
     <Scene>
-        <Background groundColor='.1 .4 .1' skyColor='.8 .8 1' />
-        <Tramsform DEF='World'>
-            <Transform DEF='Chalupa' translation='1.25 .3 1.4'>
-                <Shape>
-                    <Box size='1.499 .6 .201' />
-                    <Appearance>
-                        <ImageTexture DEF='BrickTex' url='"bricks.jpg"'/>
-                        <TextureTransform scale='5 2'/>
-                    </Appearance>
-                </Shape>
-            </Transform>
-            <Viewpoint description='Book View' position='0 0 3'/>
+        <Background backUrl='"ocean_3_back.jpg"'
+	bottomUrl='"ocean_3_bottom.jpg"'
+	frontUrl='"ocean_3_front.jpg"'
+	groundAngle='0.1 1.309 1.57'
+	groundColor='0 0 0 0 0.1 0.3 0 0.2 0.5 0 0.3 0.8'
+	leftUrl='"ocean_3_left.jpg"'
+	rightUrl='"ocean_3_right.jpg"'
+	skyAngle='0.1 0.15 1.309 1.57'
+	skyColor='0.4 0.4 0.1 0.4 0.4 0.1 0 0.1 0.3 0 0.2 0.6 0.8 0.8 0.8'
+	topUrl='"ocean_3_top.jpg"'/>
+	<Viewpoint description='Book View' position='0 0 3'/>
+    <Transform DEF='LAWN' scale='2 1 4' translation='0 0.01 0'>
+      <Transform scale='2 1 2' translation='-9 0.1 -6'>
+        <Shape>
+          <Appearance>
+            <ImageTexture url='"lawnGrass.jpg"'/>
+            <TextureTransform scale='160 80'/>
+          </Appearance>
+          <ElevationGrid creaseAngle='0.785' height='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0' xDimension='8' xSpacing='1.4285714' zDimension='8' zSpacing='0.7142857'/>
+        </Shape>
+      </Transform>
+    </Transform>
+	
+    <Transform DEF='World'>
+        <Transform DEF='Chalupa' translation='1.25 .3 1.4'>
             <Shape>
-                <Sphere radius='0.9' />
+                <Box size='1.499 .6 .201' />
                 <Appearance>
-                    <Material/>
+                    <ImageTexture DEF='BrickTex' url='"bricks.jpg"'/>
+                    <TextureTransform scale='5 2'/>
                 </Appearance>
             </Shape>
-        </Tramsform>
+        </Transform>
+        
+        <Shape>
+            <Sphere radius='0.9' />
+            <Appearance>
+                <Material/>
+            </Appearance>
+        </Shape>
+    </Transform>
     </Scene>
 </X3D> 
