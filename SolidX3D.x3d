@@ -28,9 +28,12 @@
                 </Shape>
             </Transform>
         </Transform>
-	
+        <Transform DEF='House'>
+            <Inline DEF='ImportChalupy' url='"house.x3d" "house.x3d"' />    
+            <Viewpoint DEF='ViewPointRoof' description='Dach' position='0.0 3.0 0.0'/>
+        </Transform>
         <Transform DEF='World'>
-            <Transform DEF='Chalupa' translation='1.25 .3 1.4'>
+            <Transform DEF='Chalupa' translation='5.25 .3 5.4'>
                 <Shape>
                     <Box size='1.499 .6 .201' />
                     <Appearance>
@@ -39,7 +42,7 @@
                     </Appearance>
                 </Shape>
             </Transform>
-            <Transform translation="0 1.5 0" rotation='0 1 0 3' DEF="earth">
+            <Transform translation="3 1.5 3" rotation='0 1 0 3' DEF="earth">
                 <SpotLight ambientIntensity="0.5" beamWidth="2.570796" cutOffAngle="0.393" direction="0 1 1" location="-2 0 0 " radius="16" />
                 <Shape>
                     <Sphere/>
@@ -49,7 +52,7 @@
                     </Appearance>
                 </Shape>
             </Transform>
-            <Transform translation='0 0 0' DEF="cone" rotation="0 2 1 0">
+            <Transform translation='3 0 3' DEF="cone" rotation="0 2 1 0">
                 <SpotLight beamWidth='0.1745' color='0.8 0.8 0.2' cutOffAngle='0.7837' radius='10' global="true"/> 
                 <Shape>
                     <Cone height='1'/>
