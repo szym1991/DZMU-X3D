@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 3.0//EN" "http://www.web3d.org/specifications/x3d-3.0.dtd">
+<X3D profile='Interactive' version='3.0' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='http://www.web3d.org/specifications/x3d-3.0.xsd'>
+  <head>
+    <meta content='BoxTexture.x3d' name='title'/>
+</head>
+	<Scene>	
+		<Transform translation='2 0 0'>
+			<Shape>
+				<Appearance>
+					<PixelTexture DEF='ColorTexture' image='2 4 3 0xff0000 0xffff00 0x007700 0xff0077 0x0000ff 0xff7700 0x00ff77 0x888888' repeatS='false' repeatT='false'/>
+				</Appearance> 
+				<Box DEF='DefaultBox'/>
+			</Shape>
+		</Transform> 
+		<Transform translation='-2 0 0'>
+			<Shape>
+				<Appearance>
+					<PixelTexture USE='ColorTexture'/> 
+					<TextureTransform center='.25 .33' rotation='.707' scale='2 .333' translation='.33 .25'/> 
+					<Material/>
+				</Appearance> 
+				<Box USE='DefaultBox'/>
+			</Shape>
+		</Transform>
+	</Scene>
+</X3D>

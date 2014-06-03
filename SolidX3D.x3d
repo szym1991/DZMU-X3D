@@ -94,6 +94,9 @@
             <Inline DEF='ImportWalca1' url='"cylinder.x3d" "cylinder.x3d"' />    
         </Transform>
         
+		<Transform DEF='BoxWithTexture' translation='30 1 -20'>
+            <Inline DEF='ImportBoxWithTexture' url='"BoxTexture.x3d"' />
+        </Transform>
         
         <Transform DEF='House' translation='0 0 -20'  rotation='0 1 0 1.5708'>
             <Inline DEF='ImportChalupy' url='"house.x3d"' />    
