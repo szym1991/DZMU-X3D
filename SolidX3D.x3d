@@ -6,21 +6,16 @@
         <meta name='description' content='Sphere geometric primitive node.'/>
     </head> 
     <Scene>
-	<NavigationInfo headlight='true' speed='4' type='"WALK" "FLY" "Free Fly"'/>
+        <NavigationInfo headlight='true' speed='4' type='"WALK" "FLY" "Free Fly"'/>
         <Background backUrl='"ocean_3_back.jpg"'
                     bottomUrl='"ocean_3_bottom.jpg"'
                     frontUrl='"ocean_3_front.jpg"'
-                    groundAngle='0.1 1.309 1.57'
-                    groundColor='0 0 0 0 0.1 0.3 0 0.2 0.5 0 0.3 0.8'
                     leftUrl='"ocean_3_left.jpg"'
                     rightUrl='"ocean_3_right.jpg"'
-                    skyAngle='0.1 0.15 1.309 1.57'
-                    skyColor='0.4 0.4 0.1 0.4 0.4 0.1 0 0.1 0.3 0 0.2 0.6 0.8 0.8 0.8'
                     topUrl='"ocean_3_top.jpg"'/>
         <Viewpoint description='Book View' position='1 1 3'/>
-		
         <Transform DEF='LAWN' scale='2 1 4' translation='0 0.01 0'>
-            <Transform scale='2 1 2' translation='-9 0.1 -6'>
+            <Transform scale='3 1 3' translation='-10 0.1 -10'>
                 <Shape>
                     <Appearance>
                         <ImageTexture url='"lawnGrass.jpg"'/>
@@ -30,22 +25,44 @@
                 </Shape>
             </Transform>
         </Transform>
-        <Transform DEF='House'>
-            <Inline DEF='ImportChalupy' url='"house.x3d" "house.x3d"' />    
-            <Viewpoint DEF='ViewPointRoof' description='Dach' position='0.0 4.0 0.0'/>
-        </Transform>
-		
-        <Transform DEF='World'>
-            <Transform DEF='Chalupa' translation='5.25 .3 5.4'>
+        <Transform scale='3 1 1' translation='10 0.1 0'>
+            <Group DEF='Droga'>
                 <Shape>
-                    <Box size='1.499 .6 .201' />
-                    <Appearance>
-                        <ImageTexture DEF='BrickTex' url='"bricks.jpg"'/>
-                        <TextureTransform scale='5 2'/>
+                    <Box size='20 0.2 5'/> 
+                    <Appearance DEF='GreyAppearance'>
+                        <Material diffuseColor='0.4 0.4 0.4'/>
+                    </Appearance>
+                </Shape> 
+                <Transform translation='0 0.1 0.2'>
+                <Shape DEF='Linia'>
+                    <Box size='20 0.01 0.2'/> 
+                    <Appearance DEF='WhiteAppearance'>
+                        <Material diffuseColor='1 1 1' emissiveColor='0.5 0.5 0.5'/>
                     </Appearance>
                 </Shape>
-            </Transform>
-            <Transform translation="1 1.5 4" rotation='0 1 0 3' DEF="earth">
+                </Transform> 
+                <Transform translation='0 0.1 -0.3'>
+                    <Shape USE='Linia'/>
+                </Transform>
+            </Group>
+        </Transform> 
+        <Transform scale='3 1 1' translation='10 0.1 -10' rotation='0 1 0 1.5708'>
+            <Group USE='Droga'/>
+        </Transform>
+        <Transform translation='20 0 3' scale='1.5 1.5 1.5'>
+            <Shape DEF="Pyramida">
+                <IndexedFaceSet coordIndex='0 1 2 -1 1 3 2 -1 2 3 0 -1 3 1 0'>
+                    <Coordinate point='0 0 0 10 0 0 5 0 8.3 5 8.3 2.8'/>
+                </IndexedFaceSet>
+                <Appearance>
+                    <Material diffuseColor='0.8 0.8 0.2' specularColor='0 0 0.5'/>
+                    <ImageTexture DEF="PyramidTexture" url='"pyramid.jpg"' />
+                </Appearance>
+            </Shape>
+        </Transform> 
+
+        
+        <Transform translation="20 1.5 -10" rotation='0 1 0 3' DEF="earth">
                 <SpotLight ambientIntensity="0.5" beamWidth="2.570796" cutOffAngle="0.393" direction="0 1 1" location="-2 0 0 " radius="16" />
                 <Shape>
                     <Sphere/>
@@ -55,30 +72,34 @@
                     </Appearance>
                 </Shape>
             </Transform>
-            <Transform translation='1 0 4' DEF="cone" rotation="0 2 1 0">
-                <SpotLight beamWidth='0.1745' color='0.8 0.8 0.2' cutOffAngle='0.7837' radius='10' global="true"/> 
-                <Shape>
-                    <Cone height='1'/>
-                    <Appearance>
-                        <Material ambientIntensity='0.234375' diffuseColor='0.566681 0.580872 0.580874' shininess='0.168182' specularColor='0.673937 0.45734 0.436528'/>
-                    </Appearance>
-                </Shape>
-            </Transform>
-			<Transform DEF='Cylinder1' translation='-8 1 0'>
-				<Inline DEF='ImportWalca1' url='"cylinder.x3d" "cylinder.x3d"' />    
-			</Transform>
-            <Transform translation='3 0 3'>
-                <Shape>
-                    <IndexedFaceSet coordIndex='0 1 2 -1 1 3 2 -1 2 3 0 -1 3 1 0'>
-                        <Coordinate point='0 0 0 10 0 0 5 0 8.3 5 8.3 2.8'/>
-                    </IndexedFaceSet>
-                    <Appearance>
-                        <Material diffuseColor='0.8 0.8 0.2' specularColor='0 0 0.5'/>
-                        <ImageTexture DEF="PyramidTexture" url='"pyramid.jpg"' />
-                    </Appearance>
-                </Shape>
-            </Transform> 
+        <Transform translation="20 0 -20">
+            <Shape>
+                <Cylinder radius='3' top='true'/>
+                <Appearance>
+                    <Material diffuseColor='0.5 0.3 0.2' specularColor='0 1 0' transparency='0.4'/> 
+                </Appearance>
+            </Shape> 
         </Transform>
+        <Transform translation='20 0 -10' DEF="cone" rotation="0 2 1 0">
+            <SpotLight beamWidth='0.1745' color='0.8 0.8 0.2' cutOffAngle='0.7837' radius='10' global="true"/> 
+            <Shape>
+                <Cone height='1'/>
+                <Appearance>
+                        <Material ambientIntensity='0.234375' diffuseColor='0.566681 0.580872 0.580874' shininess='0.168182' specularColor='0.673937 0.45734 0.436528'/>
+                </Appearance>
+            </Shape>
+        </Transform>
+            
+        <Transform DEF='Cylinder1' translation='30 1 -10'>
+            <Inline DEF='ImportWalca1' url='"cylinder.x3d" "cylinder.x3d"' />    
+        </Transform>
+        
+        
+        <Transform DEF='House' translation='0 0 -20'  rotation='0 1 0 1.5708'>
+            <Inline DEF='ImportChalupy' url='"house.x3d"' />    
+            <Viewpoint DEF='ViewPointRoof' description='Dach' position='0.0 4.0 0.0'/>
+        </Transform>
+        
         <timeSensor DEF='clock' cycleInterval='8' loop='true'></timeSensor>
         <orientationInterpolator DEF='spinThings' key='0 0.25 0.5 0.75 1' keyValue='0 1 0 0  0 1 0 1.57079  0 1 0 3.14159  0 1 0 4.71239  0 1 0 6.28317'></orientationInterpolator>
  
