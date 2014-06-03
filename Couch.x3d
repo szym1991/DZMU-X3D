@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 3.0//EN" "http://www.web3d.org/specifications/x3d-3.0.dtd">
+<X3D profile='Immersive' version='3.0' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='http://www.web3d.org/specifications/x3d-3.0.xsd'>
+  <head>
+    <meta content='Couch.x3d' name='title'/>
+    <meta content='Maroon couch' name='description'/>
+    <meta content='Baris AKTOP' name='creator'/>
+    <meta content='13 September 2002' name='created'/>
+    <meta content='11 October 2002' name='modified'/>
+    <meta content='https://savage.nps.edu/Savage/Buildings/HouseBarisAktop/Couch.x3d' name='identifier'/>
+    <meta content='X3D-Edit 3.3, https://savage.nps.edu/X3D-Edit' name='generator'/>
+    <meta content='../../license.html' name='license'/>
+  </head>
+  <Scene>
+    <Group>
+      <Transform scale='2 1 1' translation='0 0.2 0'>
+        <Shape>
+          <Extrusion creaseAngle='3.14' crossSection='-1 0 -1 -0.95 -0.975 -0.975 -0.95 -1 -0.05 -1 -0.025 -0.975 0 -0.95 0 0 0.1 0 0.1 -1.05 0.075 -1.075 0.05 -1.1 -1.05 -1.1 -1.075 -1.075 -1.1 -1.05 -1.1 0 -1 0' solid='false' spine='0 0 0 0 0.3 0 0 0.4 0 0 0.5 0 0 0.6 0'/>
+          <Appearance>
+            <Material DEF='ref' diffuseColor='0.5 0 0.2'/>
+          </Appearance>
+        </Shape>
+      </Transform>
+      <Transform DEF='bottom' scale='2 1 1' translation='-1 -0.1 -0.55'>
+        <Shape>
+          <Appearance>
+            <Material diffuseColor='0.7 0.35 0.1'/>
+            <ImageTexture DEF='wood' url='"wood.jpg" "https://savage.nps.edu/Savage/Buildings/HouseBarisAktop/wood.jpg"'/>
+          </Appearance>
+          <Extrusion DEF='topext' creaseAngle='3.14' crossSection='0.55 -0.55 0.575 -0.525 0.6 -0.5 0.6 0.5 0.575 0.525 0.55 0.55 -0.55 0.55 -0.575 0.525 -0.6 0.5 -0.6 -0.5 -0.575 -0.525 -0.55 -0.55 0.6 -0.55' scale='0.95 0.95 0.975 0.975 1 1 0.95 0.95' solid='false' spine='0 0 0 0 0.1 0 0 0.2 0 0 0.3 0'/>
+        </Shape>
+      </Transform>
+      <Transform scale='0.83 1 1' translation='-1.5 0.2 -0.55'>
+        <Shape DEF='seat'>
+          <Appearance>
+            <Material diffuseColor='0.5 0 0.2'/>
+          </Appearance>
+          <Extrusion creaseAngle='3.14' crossSection='0.55 -0.55 0.575 -0.525 0.6 -0.5 0.6 0.5 0.575 0.525 0.55 0.55 -0.55 0.55 -0.575 0.525 -0.6 0.5 -0.6 -0.5 -0.575 -0.525 -0.55 -0.55 0.6 -0.55' scale='0.95 0.95 0.975 0.975 1 1 0.95 0.95' solid='false' spine='0 0 0 0 0.1 0 0 0.2 0 0 0.3 0'/>
+        </Shape>
+      </Transform>
+      <Transform scale='0.83 1 1' translation='-0.5 0.2 -0.55'>
+        <Shape USE='seat'/>
+      </Transform>
+    </Group>
+  </Scene>
+</X3D>

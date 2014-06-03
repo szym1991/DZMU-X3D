@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 3.0//EN" "http://www.web3d.org/specifications/x3d-3.0.dtd">
+<X3D profile='Immersive' version='3.0' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='http://www.web3d.org/specifications/x3d-3.0.xsd'>
+  <head>
+    <meta content='Bathtub.x3d' name='title'/>
+    <meta content='Bathtub model.' name='description'/>
+    <meta content='Baris AKTOP' name='creator'/>
+    <meta content='12 September 2002' name='created'/>
+    <meta content='9 August 2010' name='modified'/>
+    <meta content='https://savage.nps.edu/Savage/Buildings/HouseBarisAktop/Bathtub.x3d' name='identifier'/>
+    <meta content='X3D-Edit 3.3, https://savage.nps.edu/X3D-Edit' name='generator'/>
+    <meta content='../../license.html' name='license'/>
+  </head>
+  <Scene>
+    <Group>
+      <Transform>
+        <Shape>
+          <Extrusion creaseAngle='3.14' crossSection='1 0 0.92 -0.38 0.71 -0.71 0.38 -0.92 0 -1 -0.38 -0.92 -0.71 -0.71 -0.92 -0.38 -1 0 -0.92 0.38 -0.71 0.71 -0.38 0.92 0 1 0.38 0.92 0.71 0.71 0.92 0.38 1 0' endCap='false' scale='0.35 0.7 0.375 0.75 0.4 0.8 0.45 0.9 0.5 1' solid='false' spine='0 0 0 0 0.1 0 0 0.3 0 0 0.4 0 0 0.5 0'/>
+          <Appearance>
+            <Material diffuseColor='0.9 0.9 0.9'/>
+          </Appearance>
+        </Shape>
+        <Transform scale='0.2 0.2 0.2' translation='0 0 -0.45'>
+          <Shape>
+            <Cylinder height='0.05' radius='0.15'/>
+            <Appearance>
+              <Material diffuseColor='0.3 0.3 0.3'/>
+            </Appearance>
+          </Shape>
+          <Transform rotation='0 1 0 1.57' translation='0 0.1 0'>
+            <Shape>
+              <Box size='0.05 0.05 0.3'/>
+              <Appearance DEF='tub'>
+                <Material diffuseColor='0.9 0.9 0.9' shininess='0.9'/>
+              </Appearance>
+            </Shape>
+          </Transform>
+          <Transform translation='0 0.1 0'>
+            <Shape>
+              <Box size='0.05 0.05 0.3'/>
+              <Appearance USE='tub'/>
+            </Shape>
+          </Transform>
+        </Transform>
+      </Transform>
+      <Transform scale='0.5 1 1'>
+        <Shape>
+          <Extrusion convex='false' creaseAngle='3.14' crossSection='1 0 0.92 -0.38 0.71 -0.71 0.38 -0.92 0 -1 -0.38 -0.92 -0.71 -0.71 -0.92 -0.38 -1 0 -0.92 0.38 -0.71 0.71 -0.38 0.92 0 1 0.38 0.92 0.71 0.71 0.92 0.38 0.995 0.005 1.2 0.005 1.2 1 -1.2 1 -1.2 -1.1 1.2 -1.1 1.2 0 1 0' solid='false' spine='0 0 0 0 0.5 0'/>
+          <Appearance>
+            <Material diffuseColor='0.8 0.8 0.4'/>
+          </Appearance>
+        </Shape>
+      </Transform>
+      <Transform translation='-0.6 1.25 -0.6'>
+        <Shape>
+          <Box size='0.05 1.5 1'/>
+          <Appearance>
+            <Material diffuseColor='0.8 1 1' transparency='0.5'/>
+          </Appearance>
+        </Shape>
+      </Transform>
+      <Transform rotation='0 1 0 1.57' translation='0 1.25 1'>
+        <Shape>
+          <Box size='0.05 1.5 1.2'/>
+          <Appearance>
+            <Material diffuseColor='0.8 1 1' transparency='0.5'/>
+          </Appearance>
+        </Shape>
+      </Transform>
+      <Transform rotation='1 0 0 -1.57'/>
+      <Transform rotation='0 1 0 -1.57' translation='-0.6 0 0'>
+        <Group>
+          <Transform DEF='door' rotation='0 1 0 1.57' translation='0.45 1.25 0'>
+            <Shape>
+              <Box size='0.05 1.5 1.1'/>
+              <Appearance>
+                <Material diffuseColor='0.8 1 1' transparency='0.5'/>
+              </Appearance>
+            </Shape>
+          </Transform>
+          <PlaneSensor DEF='slide' description='click and drag to move object' enabled='true' maxPosition='0.43 1.25' minPosition='-0.6 1.25'/>
+          <ROUTE fromField='translation_changed' fromNode='slide' toField='set_translation' toNode='door'/>
+        </Group>
+      </Transform>
+    </Group>
+    <Group>
+      <Transform scale='0.5 0.5 0.5' translation='0 0.5 -1'>
+        <Shape>
+          <Appearance USE='tub'/>
+          <Extrusion creaseAngle='3.14' crossSection='-0.25 -0.05 0.25 -0.05 0.25 0.05 -0.25 0.05 -0.25 -0.05' scale='1 1 1 1 0.9 0.9 0.8 0.8' solid='false' spine='0 0 0 0 0.03 0 0 0.04 0 0 0.05 0'/>
+        </Shape>
+        <Transform DEF='fountaintrans' rotation='1 0 0 0.5' scale='0.05 0.05 0.05' translation='0 0.03 0'>
+          <Shape>
+            <Extrusion creaseAngle='3.14' crossSection='1 0 0.92 -0.38 0.71 -0.71 0.38 -0.92 0 -1 -0.38 -0.92 -0.71 -0.71 -0.92 -0.38 -1 0 -0.92 0.38 -0.71 0.71 -0.38 0.92 0 1 0.38 0.92 0.71 0.71 0.92 0.38 1 0' endCap='false' solid='false' spine='0 0 0 0 5 0 0 6.76 0.16 0 7.42 0.58 0 7.84 1.24 0 8 2 0 7.84 2.76 0 7.42 3.42 0 6.76 3.84'/>
+            <Appearance DEF='fountainapp'>
+              <Material diffuseColor='0.95 0.95 0.95' shininess='1'/>
+            </Appearance>
+          </Shape>
+          <SphereSensor DEF='fountain' autoOffset='true' description='click and drag to rotate' enabled='true'/>
+          <ROUTE fromField='rotation_changed' fromNode='fountain' toField='set_rotation' toNode='fountaintrans'/>
+        </Transform>
+        <Transform DEF='wateropen' translation='-0.15 0.05 0'>
+          <Shape>
+            <Sphere DEF='open' radius='0.05'/>
+            <Appearance USE='fountainapp'/>
+          </Shape>
+          <Sound maxBack='30' maxFront='30' minBack='10' minFront='10'>
+            <AudioClip DEF='waterflow' description='water flow' loop='true' startTime='-1' stopTime='0' url='"waterflow.wav" "https://savage.nps.edu/Savage/Buildings/HouseBarisAktop/waterflow.wav"'/>
+          </Sound>
+          <TouchSensor DEF='water' description='touch to start water sound'/>
+          <ROUTE fromField='touchTime' fromNode='water' toField='set_startTime' toNode='waterflow'/>
+        </Transform>
+        <Transform translation='0.15 0.05 0'>
+          <Shape>
+            <Sphere USE='open'/>
+            <Appearance USE='fountainapp'/>
+          </Shape>
+          <TouchSensor DEF='nowater' description='touch to silence water sound'/>
+          <ROUTE fromField='touchTime' fromNode='nowater' toField='set_stopTime' toNode='waterflow'/>
+        </Transform>
+      </Transform>
+    </Group>
+    <Transform DEF='showertrans' rotation='1 0 0 0.5' scale='0.05 0.05 0.05' translation='0 1.5 -1.1'>
+      <Shape>
+        <Extrusion creaseAngle='3.14' crossSection='1 0 0.92 -0.38 0.71 -0.71 0.38 -0.92 0 -1 -0.38 -0.92 -0.71 -0.71 -0.92 -0.38 -1 0 -0.92 0.38 -0.71 0.71 -0.38 0.92 0 1 0.38 0.92 0.71 0.71 0.92 0.38 1 0' endCap='false' scale='0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5' solid='true' spine='0 0 0 0 5 0 0 6.76 0.16 0 7.42 0.58 0 7.84 1.24 0 8 2 0 7.84 2.76'/>
+        <Appearance>
+          <Material diffuseColor='0.95 0.95 0.95' shininess='1'/>
+        </Appearance>
+      </Shape>
+    </Transform>
+    <Viewpoint description='shower' orientation='1 0 0 -0.6' position='0 2.5 1.5'/>
+    <Transform rotation='1 0 0 0.5' scale='0.05 0.05 0.05' translation='0 1.52 -1.12'>
+      <Transform DEF='showertrans1' center='0 7.84 2.76'>
+        <Shape>
+          <Extrusion beginCap='false' creaseAngle='3.14' crossSection='1 0 0.92 -0.38 0.71 -0.71 0.38 -0.92 0 -1 -0.38 -0.92 -0.71 -0.71 -0.92 -0.38 -1 0 -0.92 0.38 -0.71 0.71 -0.38 0.92 0 1 0.38 0.92 0.71 0.71 0.92 0.38 1 0' scale='0.7 0.7 1.5 1.5 1.4 1.4' solid='false' spine='0 7.84 2.76 0 7.42 3.42 0 6.76 3.84'/>
+          <Appearance>
+            <Material diffuseColor='0.95 0.95 0.95' shininess='1'/>
+          </Appearance>
+        </Shape>
+        <SphereSensor DEF='shower' autoOffset='true' description='click and drag to rotate' enabled='true'/>
+        <ROUTE fromField='rotation_changed' fromNode='shower' toField='set_rotation' toNode='showertrans1'/>
+      </Transform>
+    </Transform>
+  </Scene>
+</X3D>
