@@ -6,6 +6,7 @@
         <meta name='description' content='Sphere geometric primitive node.'/>
     </head> 
     <Scene>
+	<NavigationInfo headlight='true' speed='4' type='"WALK" "FLY" "Free Fly"'/>
         <Background backUrl='"ocean_3_back.jpg"'
                     bottomUrl='"ocean_3_bottom.jpg"'
                     frontUrl='"ocean_3_front.jpg"'
@@ -17,6 +18,7 @@
                     skyColor='0.4 0.4 0.1 0.4 0.4 0.1 0 0.1 0.3 0 0.2 0.6 0.8 0.8 0.8'
                     topUrl='"ocean_3_top.jpg"'/>
         <Viewpoint description='Book View' position='1 1 3'/>
+		
         <Transform DEF='LAWN' scale='2 1 4' translation='0 0.01 0'>
             <Transform scale='2 1 2' translation='-9 0.1 -6'>
                 <Shape>
@@ -32,6 +34,7 @@
             <Inline DEF='ImportChalupy' url='"house.x3d" "house.x3d"' />    
             <Viewpoint DEF='ViewPointRoof' description='Dach' position='0.0 4.0 0.0'/>
         </Transform>
+		
         <Transform DEF='World'>
             <Transform DEF='Chalupa' translation='5.25 .3 5.4'>
                 <Shape>
@@ -52,14 +55,6 @@
                     </Appearance>
                 </Shape>
             </Transform>
-            <Transform translation="1 0 4">
-                <Shape>
-                    <Cylinder radius='3' top='true'/>
-                    <Appearance>
-                        <Material diffuseColor='0.5 0.3 0.2' specularColor='0 1 0' transparency='.4'/> 
-                    </Appearance>
-                </Shape> 
-            </Transform>
             <Transform translation='1 0 4' DEF="cone" rotation="0 2 1 0">
                 <SpotLight beamWidth='0.1745' color='0.8 0.8 0.2' cutOffAngle='0.7837' radius='10' global="true"/> 
                 <Shape>
@@ -69,6 +64,9 @@
                     </Appearance>
                 </Shape>
             </Transform>
+			<Transform DEF='Cylinder1' translation='-8 1 0'>
+				<Inline DEF='ImportWalca1' url='"cylinder.x3d" "cylinder.x3d"' />    
+			</Transform>
             <Transform translation='3 0 3'>
                 <Shape>
                     <IndexedFaceSet coordIndex='0 1 2 -1 1 3 2 -1 2 3 0 -1 3 1 0'>
