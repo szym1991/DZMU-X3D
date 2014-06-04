@@ -15,10 +15,10 @@
                     topUrl='"ocean_3_top.jpg"'/>
         <Viewpoint description='Book View' position='10 1.5 -5'/>
 
-		<!-- Lampa punktowa nadajaca swiatlo we wszystkich kierunkach. Kula na dole po to, aby bylo wiadomo gdzie to swiatlo jest -->
-		<PointLight DEF='LampaWHalupie' color='0.7 0.7 0.7' location='-5 5 -20' radius='15'/>
-		<Transform DEF='SphereDiffuseColor' scale='0.5 0.5 0.5' translation='-5 0 -20'>
-            <Inline DEF='SphereDiffuseColor' url='"SphereDiffuseColor.x3d"' />
+		<!-- Lampa punktowa nadajaca swiatlo we wszystkich kierunkach. -->
+		<PointLight DEF='LampaWHalupie' color='0.9 0.9 0.9' location='-5 3.4 -20' radius='15'/>
+		<Transform DEF='Lampa' translation='-5 3.42 -20'>
+            <Inline DEF='Lampa' url='"Lampa1.x3d"' />
         </Transform>
 
         <Transform DEF='LAWN' scale='2 1 4' translation='0 0.01 0'>
