@@ -196,40 +196,6 @@
                     <Appearance USE='windowApp'/>
                 </Shape>
             </Transform>
-            <Transform translation='4.4 1.7 -1.4'>
-                <Shape DEF='rightWindow1KnubOpen'>
-                    <Sphere DEF='rightWindow1Knub' radius='0.05'/>
-                    <Appearance>
-                        <Material/>
-                    </Appearance>
-                </Shape>
-                <!-- rightWindow1Clock ROUTEs:  [from rightWindow1Open.touchTime to set_startTime ] [from fraction_changed to rightWindow1Pos.set_fraction ] -->
-                <TimeSensor DEF='rightWindow1Clock'/>
-                <!-- rightWindow1Pos ROUTEs:  [from rightWindow1Clock.fraction_changed to set_fraction ] [from value_changed to rightWindow1.set_translation ] -->
-                <PositionInterpolator DEF='rightWindow1Pos' key='0 0.5 1' keyValue='4.55 1.5 -2 4.55 1.5 -2.25 4.55 1.5 -2.5'/>
-                <!-- rightWindow1Open ROUTE:  [from touchTime to rightWindow1Clock.set_startTime ] -->
-                <TouchSensor DEF='rightWindow1Open' description='touch to open'/>
-                <ROUTE fromNode='rightWindow1Open' fromField='touchTime' toNode='rightWindow1Clock' toField='set_startTime'/>
-                <ROUTE fromNode='rightWindow1Clock' fromField='fraction_changed' toNode='rightWindow1Pos' toField='set_fraction'/>
-                <ROUTE fromNode='rightWindow1Pos' fromField='value_changed' toNode='rightWindow1' toField='set_translation'/>
-            </Transform>
-            <Transform translation='4.4 1.3 -1.4'>
-                <Shape DEF='rightWindow1KnubClose'>
-                    <Sphere DEF='rightWindow1Knub2' radius='0.05'/>
-                    <Appearance>
-                        <Material/>
-                    </Appearance>
-                </Shape>
-                <!-- rightWindow1Clock2 ROUTEs:  [from rightWindow1Close.touchTime to set_startTime ] [from fraction_changed to rightWindow1Pos2.set_fraction ] -->
-                <TimeSensor DEF='rightWindow1Clock2'/>
-                <!-- rightWindow1Pos2 ROUTEs:  [from rightWindow1Clock2.fraction_changed to set_fraction ] [from value_changed to rightWindow1.set_translation ] -->
-                <PositionInterpolator DEF='rightWindow1Pos2' key='0 0.5 1' keyValue='4.55 1.5 -2.5 4.55 1.5 -2.25 4.55 1.5 -2'/>
-                <!-- rightWindow1Close ROUTE:  [from touchTime to rightWindow1Clock2.set_startTime ] -->
-                <TouchSensor DEF='rightWindow1Close' description='touch to close'/>
-                <ROUTE fromNode='rightWindow1Close' fromField='touchTime' toNode='rightWindow1Clock2' toField='set_startTime'/>
-                <ROUTE fromNode='rightWindow1Clock2' fromField='fraction_changed' toNode='rightWindow1Pos2' toField='set_fraction'/>
-                <ROUTE fromNode='rightWindow1Pos2' fromField='value_changed' toNode='rightWindow1' toField='set_translation'/>
-            </Transform>
             <Transform DEF='rightsidewall2' rotation='0 1 0 1.57' translation='4.5 2 -3.25'>
                 <Shape USE='part1'/>
             </Transform>
@@ -245,40 +211,6 @@
                     <Box size='1 1 0.075'/>
                     <Appearance USE='windowApp'/>
                 </Shape>
-            </Transform>
-            <Transform translation='4.4 1.7 -3.9'>
-                <Shape DEF='rightWindow2KnubOpen'>
-                    <Sphere DEF='rightWindow2Knub' radius='0.05'/>
-                    <Appearance>
-                        <Material/>
-                    </Appearance>
-                </Shape>
-                <!-- rightWindow2Clock ROUTEs:  [from rightWindow2Open.touchTime to set_startTime ] [from fraction_changed to rightWindow2Pos.set_fraction ] -->
-                <TimeSensor DEF='rightWindow2Clock'/>
-                <!-- rightWindow2Pos ROUTEs:  [from rightWindow2Clock.fraction_changed to set_fraction ] [from value_changed to rightWindow2.set_translation ] -->
-                <PositionInterpolator DEF='rightWindow2Pos' key='0 0.5 1' keyValue='4.55 1.5 -4.5 4.55 1.5 -4.75 4.55 1.5 -5'/>
-                <!-- rightWindow2Open ROUTE:  [from touchTime to rightWindow2Clock.set_startTime ] -->
-                <TouchSensor DEF='rightWindow2Open' description='touch to open'/>
-                <ROUTE fromNode='rightWindow2Open' fromField='touchTime' toNode='rightWindow2Clock' toField='set_startTime'/>
-                <ROUTE fromNode='rightWindow2Clock' fromField='fraction_changed' toNode='rightWindow2Pos' toField='set_fraction'/>
-                <ROUTE fromNode='rightWindow2Pos' fromField='value_changed' toNode='rightWindow2' toField='set_translation'/>
-            </Transform>
-            <Transform translation='4.4 1.3 -3.9'>
-                <Shape DEF='rightWindow2KnubClose'>
-                    <Sphere DEF='rightWindow2Knub2' radius='0.05'/>
-                    <Appearance>
-                        <Material/>
-                    </Appearance>
-                </Shape>
-                <!-- rightWindow2Clock2 ROUTEs:  [from rightWindow2Close.touchTime to set_startTime ] [from fraction_changed to rightWindow2Pos2.set_fraction ] -->
-                <TimeSensor DEF='rightWindow2Clock2'/>
-                <!-- rightWindow2Pos2 ROUTEs:  [from rightWindow2Clock2.fraction_changed to set_fraction ] [from value_changed to rightWindow2.set_translation ] -->
-                <PositionInterpolator DEF='rightWindow2Pos2' key='0 0.5 1' keyValue='4.55 1.5 -5 4.55 1.5 -4.75 4.55 1.5 -4.5'/>
-                <!-- rightWindow2Close ROUTE:  [from touchTime to rightWindow2Clock2.set_startTime ] -->
-                <TouchSensor DEF='rightWindow2Close' description='touch to close'/>
-                <ROUTE fromNode='rightWindow2Close' fromField='touchTime' toNode='rightWindow2Clock2' toField='set_startTime'/>
-                <ROUTE fromNode='rightWindow2Clock2' fromField='fraction_changed' toNode='rightWindow2Pos2' toField='set_fraction'/>
-                <ROUTE fromNode='rightWindow2Pos2' fromField='value_changed' toNode='rightWindow2' toField='set_translation'/>
             </Transform>
             <Transform DEF='rightsidewall3' rotation='0 1 0 1.57' translation='4.5 2 -5.75'>
                 <Shape USE='part1'/>
@@ -316,40 +248,6 @@
                     <Appearance USE='windowApp'/>
                 </Shape>
             </Transform>
-            <Transform translation='-4.4 1.7 -1.4'>
-                <Shape DEF='leftWindow1KnubOpen'>
-                    <Sphere DEF='leftWindow1Knub' radius='0.05'/>
-                    <Appearance>
-                        <Material/>
-                    </Appearance>
-                </Shape>
-                <!-- leftWindow1Clock ROUTEs:  [from leftWindow1Open.touchTime to set_startTime ] [from fraction_changed to leftWindow1Pos.set_fraction ] -->
-                <TimeSensor DEF='leftWindow1Clock'/>
-                <!-- leftWindow1Pos ROUTEs:  [from leftWindow1Clock.fraction_changed to set_fraction ] [from value_changed to leftWindow1.set_translation ] -->
-                <PositionInterpolator DEF='leftWindow1Pos' key='0 0.5 1' keyValue='-4.55 1.5 -2 -4.55 1.5 -2.25 -4.55 1.5 -2.5'/>
-                <!-- leftWindow1Open ROUTE:  [from touchTime to leftWindow1Clock.set_startTime ] -->
-                <TouchSensor DEF='leftWindow1Open' description='touch to open'/>
-                <ROUTE fromNode='leftWindow1Open' fromField='touchTime' toNode='leftWindow1Clock' toField='set_startTime'/>
-                <ROUTE fromNode='leftWindow1Clock' fromField='fraction_changed' toNode='leftWindow1Pos' toField='set_fraction'/>
-                <ROUTE fromNode='leftWindow1Pos' fromField='value_changed' toNode='leftWindow1' toField='set_translation'/>
-            </Transform>
-            <Transform translation='-4.4 1.3 -1.4'>
-                <Shape DEF='leftWindow1KnubClose'>
-                    <Sphere DEF='leftWindow1Knub2' radius='0.05'/>
-                    <Appearance>
-                        <Material/>
-                    </Appearance>
-                </Shape>
-                <!-- leftWindow1Clock2 ROUTEs:  [from leftWindow1Close.touchTime to set_startTime ] [from fraction_changed to leftWindow1Pos2.set_fraction ] -->
-                <TimeSensor DEF='leftWindow1Clock2'/>
-                <!-- leftWindow1Pos2 ROUTEs:  [from leftWindow1Clock2.fraction_changed to set_fraction ] [from value_changed to leftWindow1.set_translation ] -->
-                <PositionInterpolator DEF='leftWindow1Pos2' key='0 0.5 1' keyValue='-4.55 1.5 -2.5 -4.55 1.5 -2.25 -4.55 1.5 -2'/>
-                <!-- leftWindow1Close ROUTE:  [from touchTime to leftWindow1Clock2.set_startTime ] -->
-                <TouchSensor DEF='leftWindow1Close' description='touch to close'/>
-                <ROUTE fromNode='leftWindow1Close' fromField='touchTime' toNode='leftWindow1Clock2' toField='set_startTime'/>
-                <ROUTE fromNode='leftWindow1Clock2' fromField='fraction_changed' toNode='leftWindow1Pos2' toField='set_fraction'/>
-                <ROUTE fromNode='leftWindow1Pos2' fromField='value_changed' toNode='leftWindow1' toField='set_translation'/>
-            </Transform>
             <Transform DEF='leftsidewall2' rotation='0 1 0 1.57' translation='-4.5 2 -3.25'>
                 <Shape USE='part1'/>
             </Transform>
@@ -366,40 +264,6 @@
                     <Appearance USE='windowApp'/>
                 </Shape>
             </Transform>
-            <Transform translation='-4.4 1.7 -3.9'>
-                <Shape DEF='leftWindow2KnubOpen'>
-                    <Sphere DEF='leftWindow2Knub' radius='0.05'/>
-                    <Appearance>
-                        <Material/>
-                    </Appearance>
-                </Shape>
-                <!-- leftWindow2Clock ROUTEs:  [from leftWindow2Open.touchTime to set_startTime ] [from fraction_changed to leftWindow2Pos.set_fraction ] -->
-                <TimeSensor DEF='leftWindow2Clock'/>
-                <!-- leftWindow2Pos ROUTEs:  [from leftWindow2Clock.fraction_changed to set_fraction ] [from value_changed to leftWindow2.set_translation ] -->
-                <PositionInterpolator DEF='leftWindow2Pos' key='0 0.5 1' keyValue='-4.55 1.5 -4.5 -4.55 1.5 -4.75 -4.55 1.5 -5'/>
-                <!-- leftWindow2Open ROUTE:  [from touchTime to leftWindow2Clock.set_startTime ] -->
-                <TouchSensor DEF='leftWindow2Open' description='touch to open'/>
-                <ROUTE fromNode='leftWindow2Open' fromField='touchTime' toNode='leftWindow2Clock' toField='set_startTime'/>
-                <ROUTE fromNode='leftWindow2Clock' fromField='fraction_changed' toNode='leftWindow2Pos' toField='set_fraction'/>
-                <ROUTE fromNode='leftWindow2Pos' fromField='value_changed' toNode='leftWindow2' toField='set_translation'/>
-            </Transform>
-            <Transform translation='-4.4 1.3 -3.9'>
-                <Shape DEF='leftWindow2KnubClose'>
-                    <Sphere DEF='leftWindow2Knub2' radius='0.05'/>
-                    <Appearance>
-                        <Material/>
-                    </Appearance>
-                </Shape>
-                <!-- leftWindow2Clock2 ROUTEs:  [from leftWindow2Close.touchTime to set_startTime ] [from fraction_changed to leftWindow2Pos2.set_fraction ] -->
-                <TimeSensor DEF='leftWindow2Clock2'/>
-                <!-- leftWindow2Pos2 ROUTEs:  [from leftWindow2Clock2.fraction_changed to set_fraction ] [from value_changed to leftWindow2.set_translation ] -->
-                <PositionInterpolator DEF='leftWindow2Pos2' key='0 0.5 1' keyValue='-4.55 1.5 -5 -4.55 1.5 -4.75 -4.55 1.5 -4.5'/>
-                <!-- leftWindow2Close ROUTE:  [from touchTime to leftWindow2Clock2.set_startTime ] -->
-                <TouchSensor DEF='leftWindow2Close' description='touch to close'/>
-                <ROUTE fromNode='leftWindow2Close' fromField='touchTime' toNode='leftWindow2Clock2' toField='set_startTime'/>
-                <ROUTE fromNode='leftWindow2Clock2' fromField='fraction_changed' toNode='leftWindow2Pos2' toField='set_fraction'/>
-                <ROUTE fromNode='leftWindow2Pos2' fromField='value_changed' toNode='leftWindow2' toField='set_translation'/>
-            </Transform>
             <Transform DEF='leftsidewall3' rotation='0 1 0 1.57' translation='-4.5 2 -5.75'>
                 <Shape USE='part1'/>
             </Transform>
@@ -415,40 +279,6 @@
                     <Box size='1 1 0.075'/>
                     <Appearance USE='windowApp'/>
                 </Shape>
-            </Transform>
-            <Transform translation='-4.4 1.7 -6.4'>
-                <Shape DEF='leftWindow3KnubOpen'>
-                    <Sphere DEF='leftWindow3Knub' radius='0.05'/>
-                    <Appearance>
-                        <Material/>
-                    </Appearance>
-                </Shape>
-                <!-- leftWindow3Clock ROUTEs:  [from leftWindow3Open.touchTime to set_startTime ] [from fraction_changed to leftWindow3Pos.set_fraction ] -->
-                <TimeSensor DEF='leftWindow3Clock'/>
-                <!-- leftWindow3Pos ROUTEs:  [from leftWindow3Clock.fraction_changed to set_fraction ] [from value_changed to leftWindow3.set_translation ] -->
-                <PositionInterpolator DEF='leftWindow3Pos' key='0 0.5 1' keyValue='-4.55 1.5 -7 -4.55 1.5 -7.25 -4.55 1.5 -7.5'/>
-                <!-- leftWindow3Open ROUTE:  [from touchTime to leftWindow3Clock.set_startTime ] -->
-                <TouchSensor DEF='leftWindow3Open' description='touch to open'/>
-                <ROUTE fromNode='leftWindow3Open' fromField='touchTime' toNode='leftWindow3Clock' toField='set_startTime'/>
-                <ROUTE fromNode='leftWindow3Clock' fromField='fraction_changed' toNode='leftWindow3Pos' toField='set_fraction'/>
-                <ROUTE fromNode='leftWindow3Pos' fromField='value_changed' toNode='leftWindow3' toField='set_translation'/>
-            </Transform>
-            <Transform translation='-4.4 1.3 -6.4'>
-                <Shape DEF='leftWindow3KnubClose'>
-                    <Sphere DEF='leftWindow3Knub2' radius='0.05'/>
-                    <Appearance>
-                        <Material/>
-                    </Appearance>
-                </Shape>
-                <!-- leftWindow3Clock2 ROUTEs:  [from leftWindow3Close.touchTime to set_startTime ] [from fraction_changed to leftWindow3Pos2.set_fraction ] -->
-                <TimeSensor DEF='leftWindow3Clock2'/>
-                <!-- leftWindow3Pos2 ROUTEs:  [from leftWindow3Clock2.fraction_changed to set_fraction ] [from value_changed to leftWindow3.set_translation ] -->
-                <PositionInterpolator DEF='leftWindow3Pos2' key='0 0.5 1' keyValue='-4.55 1.5 -7.5 -4.55 1.5 -7.25 -4.55 1.5 -7'/>
-                <!-- leftWindow3Close ROUTE:  [from touchTime to leftWindow3Clock2.set_startTime ] -->
-                <TouchSensor DEF='leftWindow3Close' description='touch to close'/>
-                <ROUTE fromNode='leftWindow3Close' fromField='touchTime' toNode='leftWindow3Clock2' toField='set_startTime'/>
-                <ROUTE fromNode='leftWindow3Clock2' fromField='fraction_changed' toNode='leftWindow3Pos2' toField='set_fraction'/>
-                <ROUTE fromNode='leftWindow3Pos2' fromField='value_changed' toNode='leftWindow3' toField='set_translation'/>
             </Transform>
             <Transform DEF='leftsidewall4' rotation='0 1 0 1.57' translation='-4.5 2 -8.25'>
                 <Shape USE='part1'/>
@@ -532,80 +362,12 @@
                     <Appearance USE='windowApp'/>
                 </Shape>
             </Transform>
-            <Transform translation='-1.9 1.7 -8.9'>
-                <Shape DEF='backWindow1KnubOpen'>
-                    <Sphere DEF='backWindow1Knub' radius='0.05'/>
-                    <Appearance>
-                        <Material/>
-                    </Appearance>
-                </Shape>
-                <!-- backWindow1Clock ROUTEs:  [from backWindow1Open.touchTime to set_startTime ] [from fraction_changed to backWindow1Pos.set_fraction ] -->
-                <TimeSensor DEF='backWindow1Clock'/>
-                <!-- backWindow1Pos ROUTEs:  [from backWindow1Clock.fraction_changed to set_fraction ] [from value_changed to backsideWindow1.set_translation ] -->
-                <PositionInterpolator DEF='backWindow1Pos' key='0 0.5 1' keyValue='-2.5 1.5 -9.05 -2.75 1.5 -9.05 -3 1.5 -9.05'/>
-                <!-- backWindow1Open ROUTE:  [from touchTime to backWindow1Clock.set_startTime ] -->
-                <TouchSensor DEF='backWindow1Open' description='touch to open'/>
-                <ROUTE fromNode='backWindow1Open' fromField='touchTime' toNode='backWindow1Clock' toField='set_startTime'/>
-                <ROUTE fromNode='backWindow1Clock' fromField='fraction_changed' toNode='backWindow1Pos' toField='set_fraction'/>
-                <ROUTE fromNode='backWindow1Pos' fromField='value_changed' toNode='backsideWindow1' toField='set_translation'/>
-            </Transform>
-            <Transform translation='-1.9 1.3 -8.9'>
-                <Shape DEF='backWindow1KnubClose'>
-                    <Sphere DEF='backWindow1Knub2' radius='0.05'/>
-                    <Appearance>
-                        <Material/>
-                    </Appearance>
-                </Shape>
-                <!-- backWindow1Clock2 ROUTEs:  [from backWindow1Close.touchTime to set_startTime ] [from fraction_changed to backWindow1Pos2.set_fraction ] -->
-                <TimeSensor DEF='backWindow1Clock2'/>
-                <!-- backWindow1Pos2 ROUTEs:  [from backWindow1Clock2.fraction_changed to set_fraction ] [from value_changed to backsideWindow1.set_translation ] -->
-                <PositionInterpolator DEF='backWindow1Pos2' key='0 0.5 1' keyValue='-3 1.5 -9.05 -2.75 1.5 -9.05 -2.5 1.5 -9.05'/>
-                <!-- backWindow1Close ROUTE:  [from touchTime to backWindow1Clock2.set_startTime ] -->
-                <TouchSensor DEF='backWindow1Close' description='touch to close'/>
-                <ROUTE fromNode='backWindow1Close' fromField='touchTime' toNode='backWindow1Clock2' toField='set_startTime'/>
-                <ROUTE fromNode='backWindow1Clock2' fromField='fraction_changed' toNode='backWindow1Pos2' toField='set_fraction'/>
-                <ROUTE fromNode='backWindow1Pos2' fromField='value_changed' toNode='backsideWindow1' toField='set_translation'/>
-            </Transform>
             <!-- backsideWindow2 ROUTEs:  [from backWindow2Pos.value_changed to set_translation ] [from backWindow2Pos2.value_changed to set_translation ] -->
             <Transform DEF='backsideWindow2' translation='3.25 1.75 -9.05'>
                 <Shape DEF='backWindow2'>
                     <Box size='0.5 0.5 0.075'/>
                     <Appearance USE='windowApp'/>
                 </Shape>
-            </Transform>
-            <Transform translation='3.6 1.9 -8.9'>
-                <Shape DEF='backWindow2KnubOpen'>
-                    <Sphere DEF='backWindow2Knub' radius='0.05'/>
-                    <Appearance>
-                        <Material/>
-                    </Appearance>
-                </Shape>
-                <!-- backWindow2Clock ROUTEs:  [from backWindow2Open.touchTime to set_startTime ] [from fraction_changed to backWindow2Pos.set_fraction ] -->
-                <TimeSensor DEF='backWindow2Clock'/>
-                <!-- backWindow2Pos ROUTEs:  [from backWindow2Clock.fraction_changed to set_fraction ] [from value_changed to backsideWindow2.set_translation ] -->
-                <PositionInterpolator DEF='backWindow2Pos' key='0 0.5 1' keyValue='3.25 1.75 -9.05 3.125 1.75 -9.05 3 1.75 -9.05'/>
-                <!-- backWindow2Open ROUTE:  [from touchTime to backWindow2Clock.set_startTime ] -->
-                <TouchSensor DEF='backWindow2Open' description='touch to open'/>
-                <ROUTE fromNode='backWindow2Open' fromField='touchTime' toNode='backWindow2Clock' toField='set_startTime'/>
-                <ROUTE fromNode='backWindow2Clock' fromField='fraction_changed' toNode='backWindow2Pos' toField='set_fraction'/>
-                <ROUTE fromNode='backWindow2Pos' fromField='value_changed' toNode='backsideWindow2' toField='set_translation'/>
-            </Transform>
-            <Transform translation='3.6 1.6 -8.9'>
-                <Shape DEF='backWindow2KnubClose'>
-                    <Sphere DEF='backWindow2Knub2' radius='0.05'/>
-                    <Appearance>
-                        <Material/>
-                    </Appearance>
-                </Shape>
-                <!-- backWindow2Clock2 ROUTEs:  [from backWindow2Close.touchTime to set_startTime ] [from fraction_changed to backWindow2Pos2.set_fraction ] -->
-                <TimeSensor DEF='backWindow2Clock2'/>
-                <!-- backWindow2Pos2 ROUTEs:  [from backWindow2Clock2.fraction_changed to set_fraction ] [from value_changed to backsideWindow2.set_translation ] -->
-                <PositionInterpolator DEF='backWindow2Pos2' key='0 0.5 1' keyValue='3 1.75 -9.05 3.125 1.75 -9.05 3.25 1.75 -9.05'/>
-                <!-- backWindow2Close ROUTE:  [from touchTime to backWindow2Clock2.set_startTime ] -->
-                <TouchSensor DEF='backWindow2Close' description='touch to close'/>
-                <ROUTE fromNode='backWindow2Close' fromField='touchTime' toNode='backWindow2Clock2' toField='set_startTime'/>
-                <ROUTE fromNode='backWindow2Clock2' fromField='fraction_changed' toNode='backWindow2Pos2' toField='set_fraction'/>
-                <ROUTE fromNode='backWindow2Pos2' fromField='value_changed' toNode='backsideWindow2' toField='set_translation'/>
             </Transform>
             <!-- bathroomDoor ROUTEs:  [from bathroomDoorPathOpen.value_changed to set_rotation ] [from bathroomDoorPathClose.value_changed to set_rotation ] -->
             <Transform DEF='bathroomDoor' center='-0.5 0 0' rotation='0 1 0 1.57' translation='1.5 1 -6.75'>
@@ -810,7 +572,7 @@
     </Scene>
 </X3D>
 <!--
-Index for DEF nodes: backDoor, backDoorClock, backDoorClockClose, backDoorKnub, backDoorknubOut, backDoorPathClose, backDoorPathOpen, backDoorTouchClose, backDoorTouchOpen, backgr, backside, backsidewall1, backsidewall12, backsidewall13, backsidewall2, backsidewall3, backsidewall4, backsideWindow1, backsideWindow2, backwall41, backwall42, backwall5, backWindow1, backWindow1Clock, backWindow1Clock2, backWindow1Close, backWindow1Knub, backWindow1Knub2, backWindow1KnubClose, backWindow1KnubOpen, backWindow1Open, backWindow1Pos, backWindow1Pos2, backWindow2, backWindow2Clock, backWindow2Clock2, backWindow2Close, backWindow2Knub, backWindow2Knub2, backWindow2KnubClose, backWindow2KnubOpen, backWindow2Open, backWindow2Pos, backWindow2Pos2, BASIN, bathroomDoor, bathroomDoorClock, bathroomDoorClockClose, bathroomDoorKnub, bathroomDoorknubOut, bathroomDoorPathClose, bathroomDoorPathOpen, bathroomDoorTouchClose, bathroomDoorTouchOpen, bell, bellap, chair, chair1, chair2, Clock, ClockClose, Cover, DOOR, door, doorbell, doorKnub, doorPathClose, doorPathOpen, fence, floor, floorandceiling, floorapp, floorshape, front, garden, innerWalls, knub_ap, knubOut, lawn, lawnAndTree, left, leftside, leftsidewall1, leftsidewall11, leftsidewall12, leftsidewall2, leftsidewall21, leftsidewall22, leftsidewall3, leftsidewall31, leftsidewall32, leftsidewall4, leftWindow1, leftWindow1Clock, leftWindow1Clock2, leftWindow1Close, leftWindow1Knub, leftWindow1Knub2, leftWindow1KnubClose, leftWindow1KnubOpen, leftWindow1Open, leftWindow1Pos, leftWindow1Pos2, leftWindow2, leftWindow2Clock, leftWindow2Clock2, leftWindow2Close, leftWindow2Knub, leftWindow2Knub2, leftWindow2KnubClose, leftWindow2KnubOpen, leftWindow2Open, leftWindow2Pos, leftWindow2Pos2, leftWindow3, leftWindow3Clock, leftWindow3Clock2, leftWindow3Close, leftWindow3Knub, leftWindow3Knub2, leftWindow3KnubClose, leftWindow3KnubOpen, leftWindow3Open, leftWindow3Pos, leftWindow3Pos2, leftWindowOne, leftWindowThree, leftWindowTwo, part1, part11, part12, part13, part21, part3, part31, part32, part33, point1, rightside, rightsidewall1, rightsidewall11, rightsidewall12, rightsidewall2, rightsidewall21, rightsidewall22, rightsidewall23, rightsidewall3, rightsidewall31, rightsidewall4, rightWindow1, rightWindow1Clock, rightWindow1Clock2, rightWindow1Close, rightWindow1Knub, rightWindow1Knub2, rightWindow1KnubClose, rightWindow1KnubOpen, rightWindow1Open, rightWindow1Pos, rightWindow1Pos2, rightWindow2, rightWindow2Clock, rightWindow2Clock2, rightWindow2Close, rightWindow2Knub, rightWindow2Knub2, rightWindow2KnubClose, rightWindow2KnubOpen, rightWindow2Open, rightWindow2Pos, rightWindow2Pos2, rightWindow3, rightWindowOne, rightWindowThree, rightWindowTwo, roof, table, touchClose, touchOpen, up, wall_ap, wall1, wall11, wall12, wall13, wall2, wall3, wall31, wall32, wall33, WINDOW1, window1, window1Knub, window1knubopen, WINDOW2, window2, window2Knub, window2knubopen, window2Slide, windowApp, windowSlide, wood
+Index for DEF nodes: backDoor, backDoorClock, backDoorClockClose, backDoorKnub, backDoorknubOut, backDoorPathClose, backDoorPathOpen, backDoorTouchClose, backDoorTouchOpen, backgr, backside, backsidewall1, backsidewall12, backsidewall13, backsidewall2, backsidewall3, backsidewall4, backsideWindow1, backsideWindow2, backwall41, backwall42, backwall5, backWindow1, backWindow2, BASIN, bathroomDoor, bathroomDoorClock, bathroomDoorClockClose, bathroomDoorKnub, bathroomDoorknubOut, bathroomDoorPathClose, bathroomDoorPathOpen, bathroomDoorTouchClose, bathroomDoorTouchOpen, bell, bellap, chair, chair1, chair2, Clock, ClockClose, Cover, DOOR, door, doorbell, doorKnub, doorPathClose, doorPathOpen, fence, floor, floorandceiling, floorapp, floorshape, front, garden, innerWalls, knub_ap, knubOut, lawn, lawnAndTree, left, leftside, leftsidewall1, leftsidewall11, leftsidewall12, leftsidewall2, leftsidewall21, leftsidewall22, leftsidewall3, leftsidewall31, leftsidewall32, leftsidewall4, leftWindow1, leftWindow2, leftWindow3, leftWindowOne, leftWindowThree, leftWindowTwo, part1, part11, part12, part13, part21, part3, part31, part32, part33, point1, rightside, rightsidewall1, rightsidewall11, rightsidewall12, rightsidewall2, rightsidewall21, rightsidewall22, rightsidewall23, rightsidewall3, rightsidewall31, rightsidewall4, rightWindow1, rightWindow2, rightWindow3, rightWindowOne, rightWindowThree, rightWindowTwo, roof, table, touchClose, touchOpen, up, wall_ap, wall1, wall11, wall12, wall13, wall2, wall3, wall31, wall32, wall33, WINDOW1, window1, window1Knub, window1knubopen, WINDOW2, window2, window2Knub, window2knubopen, window2Slide, windowApp, windowSlide, wood
 Index for Viewpoint images: point1, Viewpoint_2, Viewpoint_3, Viewpoint_4, Viewpoint_5, Viewpoint_6, Viewpoint_7, Viewpoint_8, Viewpoint_9, Viewpoint_10, Viewpoint_11, Viewpoint_12, Viewpoint_13, Viewpoint_14, Viewpoint_15, Viewpoint_16, Viewpoint_17
 -->
 
