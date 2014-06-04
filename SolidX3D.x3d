@@ -6,7 +6,7 @@
         <meta name='description' content='Sphere geometric primitive node.'/>
     </head> 
     <Scene>
-        <NavigationInfo headlight='true' speed='4' type='"WALK" "FLY" "Free Fly"'/>
+        <NavigationInfo headlight='false' speed='4' type='"WALK" "FLY" "Free Fly"'/>
         <Background backUrl='"ocean_3_back.jpg"'
                     bottomUrl='"ocean_3_bottom.jpg"'
                     frontUrl='"ocean_3_front.jpg"'
@@ -14,6 +14,13 @@
                     rightUrl='"ocean_3_right.jpg"'
                     topUrl='"ocean_3_top.jpg"'/>
         <Viewpoint description='Book View' position='10 1.5 -5'/>
+
+		<!-- Lampa punktowa nadajaca swiatlo we wszystkich kierunkach. Kula na dole po to, aby bylo wiadomo gdzie to swiatlo jest -->
+		<PointLight DEF='LampaWHalupie' color='0.7 0.7 0.7' location='-5 5 -20' radius='15'/>
+		<Transform DEF='SphereDiffuseColor' scale='0.5 0.5 0.5' translation='-5 0 -20'>
+            <Inline DEF='SphereDiffuseColor' url='"SphereDiffuseColor.x3d"' />
+        </Transform>
+
         <Transform DEF='LAWN' scale='2 1 4' translation='0 0.01 0'>
             <Transform scale='3 1 3' translation='-10 0.1 -10'>
                 <Shape>
