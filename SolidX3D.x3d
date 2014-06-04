@@ -16,8 +16,9 @@
         <Viewpoint description='Book View' position='10 1.5 -5'/>
 		<DirectionalLight DEF='SunLight' ambientIntensity='1' direction='-0.4 -0.8 -0.7'/>
         <PositionInterpolator DEF='LightDirection' key='0 0.1 0.5 0.9 1' keyValue='0.8 -0.2 -0.2 0.8 -0.2 -0.2 0 -1 -0.2 -0.8 -0.2 -0.2 -0.8 -0.2 -0.2'/>
+
 		<!-- Lampa punktowa nadajaca swiatlo we wszystkich kierunkach. -->
-		<PointLight DEF='LampaWHalupie' color='0.9 0.9 0.9' location='-5 3.4 -20' radius='15'/>
+		<PointLight DEF='LampaWHalupie' color='0.6 0.6 0.6' location='-5 3.4 -20' radius='15'/>
 		<Transform DEF='Lampa' translation='-5 3.42 -20'>
             <Inline DEF='Lampa' url='"Lampa1.x3d"' />
         </Transform>
@@ -99,7 +100,7 @@
         </Transform>
             
         <Transform DEF='Cylinder1' translation='30 1 -10'>
-            <Inline DEF='ImportWalca1' url='"cylinder.x3d" "cylinder.x3d"' />    
+            <Inline DEF='ImportWalca1' url='"cylinder.x3d"' />    
         </Transform>
         
 		<Transform DEF='BoxWithTexture' translation='30 1 -20'>
@@ -114,6 +115,10 @@
             <Inline DEF='SphereDiffuseColor' url='"SphereDiffuseColor.x3d"' />
         </Transform>
         
+		<Transform DEF='KolorowaKula' translation='30 0.2 -30'>
+            <Inline DEF='KolorowaKula' url='"KulaZeSwiatlami.x3d"' />    
+        </Transform>
+		
         <Transform DEF='House' translation='0 0 -20'  rotation='0 1 0 1.5708'>
             <Inline DEF='ImportChalupy' url='"house.x3d"' />    
             <Viewpoint DEF='ViewPointRoof' description='Dach' position='0.0 4.0 0.0'/>
