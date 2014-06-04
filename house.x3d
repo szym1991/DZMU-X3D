@@ -65,7 +65,7 @@
                     </Shape>
                 </Transform>
                 <!-- window2Slide ROUTE:  [from translation_changed to WINDOW2.set_translation ] -->
-                <PlaneSensor DEF='window2Slide' description='click and drag to move window' maxPosition='-2.5 1.5' minPosition='-3 1.5'/>
+                <PlaneSensor DEF='window2Slide' description='kliknij i przeciągnij aby otworzyć okno' maxPosition='-2.5 1.5' minPosition='-3 1.5'/>
                 <ROUTE fromNode='window2Slide' fromField='translation_changed' toNode='WINDOW2' toField='set_translation'/>
             </Transform>
             <!-- WINDOW1 ROUTE:  [from windowSlide.translation_changed to set_translation ] -->
@@ -83,7 +83,7 @@
                     </Shape>
                 </Transform>
                 <!-- windowSlide ROUTE:  [from translation_changed to WINDOW1.set_translation ] -->
-                <PlaneSensor DEF='windowSlide' description='click and drag to move window' maxPosition='3 1.5' minPosition='2.5 1.5'/>
+                <PlaneSensor DEF='windowSlide' description='kliknij i przeciągnij aby otworzyć okno' maxPosition='3 1.5' minPosition='2.5 1.5'/>
                 <ROUTE fromNode='windowSlide' fromField='translation_changed' toNode='WINDOW1' toField='set_translation'/>
             </Transform>
             <Transform DEF='wall2' translation='1.25 2 0'>
