@@ -114,6 +114,10 @@
             <Inline DEF='ImportBoxWithTexture' url='"BoxTexture.x3d"' />
         </Transform>
 		
+		<Transform DEF='BoxSimple' translation='20 1 -30'>
+            <Inline DEF='ImportBoxWithTexture2' url='"BoxTexture2.x3d"' />
+        </Transform>
+		
 		<Transform DEF='SphereEmissiveColor' translation='35 1 -15'>
             <Inline DEF='ImportSphereEmissiveColor' url='"SphereEmissiveColor.x3d"' />
         </Transform>
@@ -125,6 +129,8 @@
 		<Transform DEF='KolorowaKula' translation='30 0.2 -30'>
             <Inline DEF='KolorowaKula' url='"KulaZeSwiatlami.x3d"' />    
         </Transform>
+		
+		  
 		
         <Transform DEF='House' translation='0 0 -20'  rotation='0 1 0 1.5708'>
             <Inline DEF='ImportChalupy' url='"house.x3d"' />
