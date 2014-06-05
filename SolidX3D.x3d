@@ -6,14 +6,21 @@
         <meta name='description' content='Sphere geometric primitive node.'/>
     </head> 
     <Scene>
-        <NavigationInfo headlight='false' speed='4' type='"WALK" "FLY" "Free Fly"'/>
+		<!-- Zdefiniowanie dwoch trybow nawigacji: chodzenia i latania. -->
+        <NavigationInfo headlight='false' speed='8' type='"WALK" "FLY"'/>
+		
+		<!-- Zdefiniowanie otaczajacego swiata - nieba -->
         <Background backUrl='"ocean_3_back.jpg"'
                     bottomUrl='"ocean_3_bottom.jpg"'
                     frontUrl='"ocean_3_front.jpg"'
                     leftUrl='"ocean_3_left.jpg"'
                     rightUrl='"ocean_3_right.jpg"'
                     topUrl='"ocean_3_top.jpg"'/>
-        <Viewpoint description='Book View' position='10 1.5 -5'/>
+		
+		<!-- Domyslny viewport na drodze -->
+		<Viewpoint description='Ulica - domyslny' position='10 1.5 -5'/>
+		
+		<!-- Imitacja swiatla slonecznego. -->
 		<DirectionalLight DEF='SunLight' ambientIntensity='1' direction='-0.4 -0.8 -0.7'/>
         <PositionInterpolator DEF='LightDirection' key='0 0.1 0.5 0.9 1' keyValue='0.8 -0.2 -0.2 0.8 -0.2 -0.2 0 -1 -0.2 -0.8 -0.2 -0.2 -0.8 -0.2 -0.2'/>
 
@@ -120,14 +127,24 @@
         </Transform>
 		
         <Transform DEF='House' translation='0 0 -20'  rotation='0 1 0 1.5708'>
-            <Inline DEF='ImportChalupy' url='"house.x3d"' />    
-            <Viewpoint DEF='ViewPointRoof' description='Dach' position='0.0 4.0 0.0'/>
+            <Inline DEF='ImportChalupy' url='"house.x3d"' />
+			<Viewpoint description='Przod domu' position='0 1.5 12'/>
+			<Viewpoint description='Plac z brylami' orientation='0 1 0 2.35' position='18 1.5 14.5'/>
+			<Viewpoint description='Tyl domu' orientation='0 1 0 3.14' position='0 1.5 -20'/>
+			<Viewpoint description='Lewa strona domu' orientation='0 1 0 -1.57' position='-15 1.5 -4.5'/>
+			<Viewpoint description='Prawa strona domu' orientation='0 1 0 1.57' position='15 4 -4.5'/>
+			<Viewpoint description='Glowny pokoj - DOM' orientation='0 0.95 0.17 1.27' position='4 3 -0.2'/>
+			<Viewpoint description='Lewy pokoj - DOM' orientation='0 1 0 0.83' position='-1.5 2 -5.8'/>
+			<Viewpoint description='Prawy pokoj - DOM' orientation='-0.02 -1 -0.06 2.36' position='1.5 1.75 -8'/>
+			<Viewpoint description='Korytarz - DOM' fieldOfView='1' orientation='0 1 0 -1.57' position='-1 1.5 -7.5'/>
+            <Viewpoint description='Dach' orientation='-0.025 1 0 3.14' position='0.0 6.0 0.0'/>
         </Transform>
         
         <timeSensor DEF='clock' cycleInterval='8' loop='true'></timeSensor>
         <orientationInterpolator DEF='spinThings' key='0 0.25 0.5 0.75 1' keyValue='0 1 0 0  0 1 0 1.57079  0 1 0 3.14159  0 1 0 4.71239  0 1 0 6.28317'></orientationInterpolator>
  
         <ROUTE fromNode='clock' fromField='fraction_changed' toNode='spinThings' toField='set_fraction'></ROUTE>
-        <ROUTE fromNode='spinThings' fromField='value_changed' toNode='earth' toField='set_rotation'></ROUTE> 
+        <ROUTE fromNode='spinThings' fromField='value_changed' toNode='earth' toField='set_rotation'></ROUTE>
+			
     </Scene>
 </X3D> 

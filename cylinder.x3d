@@ -6,15 +6,6 @@
     <meta content='trackpoint_changed-movie.mpg' name='MovingImage'/>
   </head>
   <Scene>
-    <NavigationInfo type='"EXAMINE" "WALK" "FLY" "ANY"'/>
-    <Group>
-      <Viewpoint description='Front View'/>
-      <Viewpoint description='Rear View' orientation='0 1 0 3.14' position='0 0 -10'/>
-      <Viewpoint description='Top View' orientation='1 0 0 -1.57' position='0 10 0'/>
-      <Viewpoint description='Bottom View' orientation='1 0 0 1.57' position='0 -10 0'/>
-      <Viewpoint description='Right View' orientation='0 1 0 1.57' position='10 0 0'/>
-      <Viewpoint description='Left View' orientation='0 1 0 -1.57' position='-10 0 0'/>
-    </Group>
     <Group>
       <Transform DEF='MYCYL'>
         <Transform DEF='CYL_BALL'>
