@@ -508,9 +508,11 @@
             <Transform rotation='0 1 0 3.14' scale='0.7 0.7 0.7' translation='3 0.2 -3'>
 				<Inline url='"BoxTexture3.x3d" "BoxTexture3.x3d"'/>
 			</Transform>
+			<Transform rotation='0 1 0 1.57' scale='0.7 0.5 0.7' translation='-2 0.6 -1.8'>
+				<Inline url='"SphereMetal.x3d" "SphereMetal.x3d"'/>
+			</Transform>
             <Transform translation='3.75 0 6.75'>
-                <Inline DEF='fence'
-        url=' "Fence.x3d" "Fence.wrl"  '/>
+                <Inline DEF='fence' url=' "Fence.x3d" "Fence.wrl"  '/>
             </Transform>
             <!-- inadvertant deletion here? -->
             <Transform translation='-11.25 0 6.75'>
