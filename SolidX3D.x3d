@@ -25,10 +25,28 @@
         <PositionInterpolator DEF='LightDirection' key='0 0.1 0.5 0.9 1' keyValue='0.8 -0.2 -0.2 0.8 -0.2 -0.2 0 -1 -0.2 -0.8 -0.2 -0.2 -0.8 -0.2 -0.2'/>
 
 		<!-- Lampa punktowa nadajaca swiatlo we wszystkich kierunkach. -->
-		<PointLight DEF='LampaWHalupie' color='0.6 0.6 0.6' location='-5 3.4 -20' radius='15'/>
+		<!-- LampLight ROUTE:  [from Toggle.on_changed to set_on ] -->
+		<PointLight DEF='LampLight' color='0.6 0.6 0.6' location='-5 3.4 -20' radius='15' on='true'/>
 		<Transform DEF='Lampa' translation='-5 3.42 -20'>
             <Inline DEF='Lampa' url='"Lampa1.x3d"' />
         </Transform>
+		<Transform translation='-5.45 1.5 -21.75' rotation='0 1 0 1.5708'>
+                <Shape>
+                    <Sphere radius='0.05'/>
+                    <Appearance DEF='bellap'>
+                        <Material diffuseColor='0.9 0.9 0.9'/>
+                    </Appearance>
+                </Shape>
+				<!-- LightSwitch ROUTE:  [from isActive to Toggle.set_active ] -->
+				<TouchSensor DEF='LightSwitch'/>
+                <Shape>
+                    <Box size='0.2 0.15 0.05'/>
+                    <Appearance>
+                        <Material diffuseColor='0.5 0.5 0.5'/>
+                    </Appearance>
+                </Shape>
+				
+            </Transform>
 
         <Transform DEF='LAWN' scale='2 1 4' translation='0 0.01 0'>
             <Transform scale='3 1 3' translation='-10 0.1 -10'>
@@ -151,6 +169,27 @@
  
         <ROUTE fromNode='clock' fromField='fraction_changed' toNode='spinThings' toField='set_fraction'></ROUTE>
         <ROUTE fromNode='spinThings' fromField='value_changed' toNode='earth' toField='set_rotation'></ROUTE>
+		<!-- Toggle ROUTEs:  [from LightSwitch.isActive to set_active ] [from on_changed to LampLight.set_on ] -->
+		<Script DEF='Toggle'>
+		<field name='on' type='SFBool' value='true' accessType='initializeOnly'/>
+		<field name='set_active' type='SFBool' accessType='inputOnly'/>
+		<field name='on_changed' type='SFBool' accessType='outputOnly'/>
+		<![CDATA[ 
+		ecmascript:
+				function set_active( b, tm ) {
+					// ignore button releases
+					if ( b == FALSE ) return;
+
+					// toggle on button presses
+					if ( on == TRUE ) on = FALSE;
+					else              on = TRUE;
+					on_changed = on;
+				}
+		]]>
+		</Script>
+		<ROUTE fromNode='LightSwitch' fromField='isActive' toNode='Toggle' toField='set_active'/>
+		<ROUTE fromNode='Toggle' fromField='on_changed' toNode='LampLight' toField='set_on'/> 
+		
 			
     </Scene>
 </X3D> 
