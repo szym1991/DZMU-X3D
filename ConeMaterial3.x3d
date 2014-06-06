@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 3.3//EN" "http://www.web3d.org/specifications/x3d-3.3.dtd">
+<X3D profile='Interchange' version='3.3'  xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation =' http://www.web3d.org/specifications/x3d-3.3.xsd '>
+<head>
+<meta name='title' content='ConeMaterial.x3d'/>
+<meta name='description' content='Stożek mały, matowy, odbijający światło'/>
+</head>
+<Scene>
+	<Shape>
+		<Cone height='5' bottomRadius='1' solid='true'/>
+			<Appearance>
+			<Material ambientIntensity='0.256' diffuseColor='0.029158 0.026292 0.026964' shininess='0.061224' specularColor='0.641609 0.651044 0.979592'/>
+		</Appearance>
+	</Shape>
+</Scene>
+</X3D> 

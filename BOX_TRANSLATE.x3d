@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 3.0//EN" "http://www.web3d.org/specifications/x3d-3.0.dtd">
+<X3D profile='Interchange' version='3.0' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='http://www.web3d.org/specifications/x3d-3.0.xsd'>
+  <head>
+    <meta content='BOX_TRANSLATE' name='title'/>
+    <meta content='Prosty prostopadloscian z teksturą skrzyni, który zmienia położenie' name='description'/>>
+  </head>
+  <Scene>
+	<!-- TIME ROUTE:  [from fraction_changed to POSITION.set_fraction ] -->
+	<TimeSensor DEF='TIME' cycleInterval='5' loop='true'/>
+	<!-- POSITION ROUTEs:  [from TIME.fraction_changed to set_fraction ] [from value_changed to BOX_TRANSLATE.set_translation ] -->
+	<PositionInterpolator DEF='POSITION' key='0 0.08 0.16 0.24 0.32 0.4 0.48 0.56 0.64 0.72 0.8 0.88 0.96' keyValue='0 0 0 -1.75 0 0 0 0 0 1.75 0 0 0 0 0 0 -1.75 0 0 0 0 0 1.75 0 0 0 0 0 0 -1.75 0 0 0 0 0 1.75 0 0 0'/>
+	<Group>
+		<!-- BOX_TRANSLATE ROUTE:  [from POSITION.value_changed to set_translation ] -->
+		<Transform DEF="BOX_TRANSLATE" translation='-1.0 0.0 0.0'>
+		  <Shape>
+			<Appearance>
+			  <Material diffuseColor='0.5 1.0 0.0'/>
+			  <ImageTexture DEF="BoxTexture2" url='"box_texture.jpg"' />
+			</Appearance>
+			<Box/>
+		  </Shape>
+		</Transform>
+		</Group>
+		<ROUTE fromNode='TIME' fromField='fraction_changed' toNode='POSITION' toField='set_fraction'/>
+		<ROUTE fromNode='POSITION' fromField='value_changed' toNode='BOX_TRANSLATE' toField='set_translation'/> 
+  </Scene>
+</X3D>
