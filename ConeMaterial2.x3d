@@ -3,14 +3,20 @@
 <X3D profile='Interchange' version='3.3'  xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation =' http://www.web3d.org/specifications/x3d-3.3.xsd '>
 <head>
 <meta name='title' content='ConeMaterial.x3d'/>
-<meta name='description' content='Stożek błyszczący, który odbija światło i jest przeźroczysty'/>
+<meta name='description' content='Stożek błyszczący, który odbija światło, jest przeźroczysty i obraca się'/>
 </head>
 <Scene>
-	<Shape>
-		<Cone height='6' bottomRadius='2' solid='true'/>
-			<Appearance>
-			<Material diffuseColor='0.7 0.2 0.2' ambientIntensity='0.8' shininess='0.155' specularColor='0.757576 0.738847 0.590386'/>
-		</Appearance>
-	</Shape>
+	<Transform DEF='ConeMaterial2' translation='0 1.5 0'>
+		<Shape>
+			<Cone height='6' bottomRadius='2' solid='true'/>
+				<Appearance>
+					<Material diffuseColor='0.7 0.2 0.2' ambientIntensity='0.8' shininess='0.155' specularColor='0.757576 0.738847 0.590386'/>
+				</Appearance>
+		</Shape>
+		<timeSensor DEF='clockConeMaterial2' cycleInterval='8' loop='true'></timeSensor>
+		<orientationInterpolator DEF='spinThingsConeMaterial2' key='0 0.25 0.5 0.75 1' keyValue='0 1 0 6.28317 0 1 0 4.71239  0 1 0 3.14159 0 1 0 1.57079 0 1 0 0'></orientationInterpolator>  
+	</Transform>
+	<ROUTE fromNode='clockConeMaterial2' fromField='fraction_changed' toNode='spinThingsConeMaterial2' toField='set_fraction'></ROUTE>
+    <ROUTE fromNode='spinThingsConeMaterial2' fromField='value_changed' toNode='ConeMaterial2' toField='set_rotation'></ROUTE>
 </Scene>
 </X3D> 

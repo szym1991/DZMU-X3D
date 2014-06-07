@@ -2,12 +2,12 @@
 <!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 3.0//EN" "http://www.web3d.org/specifications/x3d-3.0.dtd">
 <X3D profile='Interactive' version='3.0' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='http://www.web3d.org/specifications/x3d-3.0.xsd'>
   <head>
-    <meta content='cylinder.x3d' name='title'/>
+    <meta content='Cylinder.x3d' name='title'/>
   </head>
   <Scene>
     <Group>
-      <Transform DEF='MYCYL'>
-        <Transform DEF='CYL_BALL'>
+      <Transform DEF='Cylinder1'>
+        <Transform DEF='CylinderBall'>
           <Shape>
             <Appearance>
               <Material diffuseColor='4 0 1'/>
@@ -15,7 +15,7 @@
             <Sphere radius='0.3'/>
           </Shape>
         </Transform>
-        <CylinderSensor DEF='CYLSENSOR' description='kliknij i przeciagnij kulke'/>
+        <CylinderSensor DEF='CylinderSensor' description='kliknij i przeciagnij kulke'/>
         <Shape>
           <Appearance>
             <Material diffuseColor='0 2 1'/>
@@ -24,6 +24,6 @@
         </Shape>
       </Transform>
     </Group>
-    <ROUTE fromField='trackPoint_changed' fromNode='CYLSENSOR' toField='set_translation' toNode='CYL_BALL'/>
+    <ROUTE fromField='trackPoint_changed' fromNode='CylinderSensor' toField='set_translation' toNode='CylinderBall'/>
   </Scene>
 </X3D>
