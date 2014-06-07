@@ -208,7 +208,15 @@
             </Shape>
         </Transform>
 		
+
         <!-- Dom + ustawienia viewports -->
+
+		<!-- Sfera z trzema lampami, święcącymi światłem spotlight w domku -->
+		<Transform DEF='SphereWithLampsInHouse' translation='-7.5 0.2 -23'>
+            <Inline DEF='SphereWithLampsImportInHouse' url='"SphereWithLampsInHouse.x3d"' />    
+        </Transform>
+		
+		<!-- Dom + ustawienia viewports -->
         <Transform DEF='House' translation='0 0 -20'  rotation='0 1 0 1.5708'>
             <Inline DEF='ImportChalupy' url='"house.x3d"' />
             <Viewpoint description='Przod domu' position='0 1.5 12'/>
