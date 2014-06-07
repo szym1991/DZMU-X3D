@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 3.3//EN" "http://www.web3d.org/specifications/x3d-3.3.dtd">
+<X3D profile='Interchange' version='3.3' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='http://www.web3d.org/specifications/x3d-3.3.xsd'>
+    <head>
+        <meta content='Lamp.x3d' name='title'/>
+    </head>
+    <Scene>
+		<!-- LampLight ROUTE:  [from Toggle.on_changed to set_on ] -->
+        <PointLight DEF='LampLight' color='0.6 0.6 0.6' location='-5 3.4 -20' radius='15' on='true'/>
+        <Transform DEF='Lampa' scale='0.15 0.15 0.15'>
+            <Shape>
+                <Appearance>
+                    <!-- MAT2 ROUTE:  [from Toggle.emissiveColor_changed to set_emissiveColor ]-->
+                    <Material DEF='MAT2' diffuseColor='1 1 1' emissiveColor='1 1 1' specularColor='0 1 0'/>
+                </Appearance>
+                <Sphere/>
+            </Shape>>
+        </Transform>
+        <Transform scale='0.01 0.3 0.01' translation='0 0.28 0'>
+            <Shape>
+                <Appearance>
+                    <Material color='0.2 0.2 0.2'/>
+                </Appearance>
+                <Cylinder/>
+            </Shape>
+        </Transform>
+        <Transform translation='-0.45 -1.77 -1.40' rotation='0 1 0 1.5708'>
+            <Shape>
+                <Sphere radius='0.05'/>
+                <Appearance DEF='bellap'>
+                    <!-- MAT ROUTE:  [from Toggle.diffuseColor_changed to set_diffuseColor ] -->
+                    <Material DEF='MAT' diffuseColor='1 0 0'/>
+                </Appearance>
+            </Shape>
+            <!-- LightSwitch ROUTE:  [from isActive to Toggle.set_active ] -->
+            <TouchSensor DEF='LightSwitch'/>
+            <Shape>
+                <Box size='0.2 0.15 0.05'/>
+                <Appearance>
+                     <Material diffuseColor='0.5 0.5 0.5'/>
+                </Appearance>
+            </Shape>    
+        </Transform>
+		<!-- Toggle ROUTEs:  [from LightSwitch.isActive to set_active ] [from on_changed to LampLight.set_on ] [from diffuseColor_changed to MAT.set_diffuseColor] [from set_emissiveColor_changed to MAT2.set_emissiveColor] -->
+        <Script DEF='Toggle'>
+        <field name='on' type='SFBool' value='true' accessType='initializeOnly'/>
+        <field name='set_active' type='SFBool' accessType='inputOnly'/>
+        <field name='on_changed' type='SFBool' accessType='outputOnly'/>
+        <field name='diffuseColor_changed' type='SFColor' accessType='outputOnly'/>
+        <field name='diffuseColor_changed2' type='SFColor' accessType='outputOnly'/>
+        <field name='emissiveColor_changed' type='SFColor' accessType='outputOnly'/>
+        <![CDATA[ 
+        ecmascript:
+                function set_active( b, tm ) {
+                    // ignore button releases
+                    if ( b == FALSE ) return;
+
+                    // toggle on button presses
+                    if ( on == TRUE ){ 
+                        on = FALSE; 
+                        diffuseColor_changed = new SFColor(0,0,1);
+                        emissiveColor_changed = new SFColor(0,0,0);
+                    }
+                    else  {            
+                        on = TRUE; 
+                        diffuseColor_changed = new SFColor(1,0,0); 
+                        emissiveColor_changed = new SFColor(1,1,1);                     
+                    }
+                    on_changed = on;
+                }
+        ]]>
+        </Script>
+        <ROUTE fromNode='LightSwitch' fromField='isActive' toNode='Toggle' toField='set_active'/>
+        <ROUTE fromNode='Toggle' fromField='on_changed' toNode='LampLight' toField='set_on'/>
+        <ROUTE fromNode='Toggle' fromField='diffuseColor_changed' toNode='MAT' toField='set_diffuseColor'/>
+        <ROUTE fromNode='Toggle' fromField='emissiveColor_changed' toNode='MAT2' toField='set_emissiveColor'/> 
+    </Scene>
+</X3D>
