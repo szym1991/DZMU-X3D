@@ -132,7 +132,7 @@
                     <!-- doorPathOpen ROUTEs:  [from Clock.fraction_changed to set_fraction ] [from value_changed to DOOR.set_rotation ] -->
                     <OrientationInterpolator DEF='doorPathOpen' key='0 0.34 0.68 1' keyValue='0 1 0 0 0 1 0 0.7 0 1 0 1.4 0 1 0 2.1'/>
                     <!-- touchOpen ROUTE:  [from touchTime to Clock.set_startTime ] -->
-                    <TouchSensor DEF='touchOpen' description='touch to open'/>
+                    <TouchSensor DEF='touchOpen' description='kliknij aby otworzyc drzwi'/>
                     <ROUTE fromNode='touchOpen' fromField='touchTime' toNode='Clock' toField='set_startTime'/>
                     <ROUTE fromNode='Clock' fromField='fraction_changed' toNode='doorPathOpen' toField='set_fraction'/>
                     <ROUTE fromNode='doorPathOpen' fromField='value_changed' toNode='DOOR' toField='set_rotation'/>
@@ -144,7 +144,7 @@
                     <!-- doorPathClose ROUTEs:  [from ClockClose.fraction_changed to set_fraction ] [from value_changed to DOOR.set_rotation ] -->
                     <OrientationInterpolator DEF='doorPathClose' key='0 0.34 0.68 1' keyValue='0 1 0 2.1 0 1 0 1.4 0 1 0 0.7 0 1 0 0'/>
                     <!-- touchClose ROUTE:  [from touchTime to ClockClose.set_startTime ] -->
-                    <TouchSensor DEF='touchClose' description='touch to close'/>
+                    <TouchSensor DEF='touchClose' description='kliknij aby zamknac drzwi'/>
                     <ROUTE fromNode='touchClose' fromField='touchTime' toNode='ClockClose' toField='set_startTime'/>
                     <ROUTE fromNode='ClockClose' fromField='fraction_changed' toNode='doorPathClose' toField='set_fraction'/>
                     <ROUTE fromNode='doorPathClose' fromField='value_changed' toNode='DOOR' toField='set_rotation'/>
@@ -307,7 +307,7 @@
                     <!-- backDoorPathOpen ROUTEs:  [from backDoorClock.fraction_changed to set_fraction ] [from value_changed to backDoor.set_rotation ] -->
                     <OrientationInterpolator DEF='backDoorPathOpen' key='0 0.34 0.68 1' keyValue='0 1 0 0 0 1 0 0.7 0 1 0 1.4 0 1 0 2.1'/>
                     <!-- backDoorTouchOpen ROUTE:  [from touchTime to backDoorClock.set_startTime ] -->
-                    <TouchSensor DEF='backDoorTouchOpen' description='touch to open'/>
+                    <TouchSensor DEF='backDoorTouchOpen' description='kliknij aby otorzyc drzwi'/>
                     <ROUTE fromNode='backDoorTouchOpen' fromField='touchTime' toNode='backDoorClock' toField='set_startTime'/>
                     <ROUTE fromNode='backDoorClock' fromField='fraction_changed' toNode='backDoorPathOpen' toField='set_fraction'/>
                     <ROUTE fromNode='backDoorPathOpen' fromField='value_changed' toNode='backDoor' toField='set_rotation'/>
@@ -319,7 +319,7 @@
                     <!-- backDoorPathClose ROUTEs:  [from backDoorClockClose.fraction_changed to set_fraction ] [from value_changed to backDoor.set_rotation ] -->
                     <OrientationInterpolator DEF='backDoorPathClose' key='0 0.34 0.68 1' keyValue='0 1 0 2.1 0 1 0 1.4 0 1 0 0.7 0 1 0 0'/>
                     <!-- backDoorTouchClose ROUTE:  [from touchTime to backDoorClockClose.set_startTime ] -->
-                    <TouchSensor DEF='backDoorTouchClose' description='touch to close'/>
+                    <TouchSensor DEF='backDoorTouchClose' description='kliknij aby zamknac drzwi'/>
                     <ROUTE fromNode='backDoorTouchClose' fromField='touchTime' toNode='backDoorClockClose' toField='set_startTime'/>
                     <ROUTE fromNode='backDoorClockClose' fromField='fraction_changed' toNode='backDoorPathClose' toField='set_fraction'/>
                     <ROUTE fromNode='backDoorPathClose' fromField='value_changed' toNode='backDoor' toField='set_rotation'/>
@@ -376,7 +376,7 @@
                     <!-- bathroomDoorPathOpen ROUTEs:  [from bathroomDoorClock.fraction_changed to set_fraction ] [from value_changed to bathroomDoor.set_rotation ] -->
                     <OrientationInterpolator DEF='bathroomDoorPathOpen' key='0 0.34 0.68 1' keyValue='0 1 0 1.57 0 1 0 2.2 0 1 0 2.9 0 1 0 3.25'/>
                     <!-- bathroomDoorTouchOpen ROUTE:  [from touchTime to bathroomDoorClock.set_startTime ] -->
-                    <TouchSensor DEF='bathroomDoorTouchOpen' description='touch to open'/>
+                    <TouchSensor DEF='bathroomDoorTouchOpen' description='kliknij aby otworzyc drzwi'/>
                     <ROUTE fromNode='bathroomDoorTouchOpen' fromField='touchTime' toNode='bathroomDoorClock' toField='set_startTime'/>
                     <ROUTE fromNode='bathroomDoorClock' fromField='fraction_changed' toNode='bathroomDoorPathOpen' toField='set_fraction'/>
                     <ROUTE fromNode='bathroomDoorPathOpen' fromField='value_changed' toNode='bathroomDoor' toField='set_rotation'/>
@@ -388,7 +388,7 @@
                     <!-- bathroomDoorPathClose ROUTEs:  [from bathroomDoorClockClose.fraction_changed to set_fraction ] [from value_changed to bathroomDoor.set_rotation ] -->
                     <OrientationInterpolator DEF='bathroomDoorPathClose' key='0 0.34 0.68 1' keyValue='0 1 0 3.25 0 1 0 2.9 0 1 0 2.2 0 1 0 1.57'/>
                     <!-- bathroomDoorTouchClose ROUTE:  [from touchTime to bathroomDoorClockClose.set_startTime ] -->
-                    <TouchSensor DEF='bathroomDoorTouchClose' description='touch to close'/>
+                    <TouchSensor DEF='bathroomDoorTouchClose' description='kliknij aby zamknac drzwi'/>
                     <ROUTE fromNode='bathroomDoorTouchClose' fromField='touchTime' toNode='bathroomDoorClockClose' toField='set_startTime'/>
                     <ROUTE fromNode='bathroomDoorClockClose' fromField='fraction_changed' toNode='bathroomDoorPathClose' toField='set_fraction'/>
                     <ROUTE fromNode='bathroomDoorPathClose' fromField='value_changed' toNode='bathroomDoor' toField='set_rotation'/>
