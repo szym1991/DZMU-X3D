@@ -16,12 +16,12 @@
         <NavigationInfo headlight='false' speed='8' type='"WALK" "FLY"'/>
         
         <!-- Zdefiniowanie otaczajacego swiata - nieba -->
-        <Background backUrl='"ocean_3_back.jpg"'
-                    bottomUrl='"ocean_3_bottom.jpg"'
-                    frontUrl='"ocean_3_front.jpg"'
-                    leftUrl='"ocean_3_left.jpg"'
-                    rightUrl='"ocean_3_right.jpg"'
-                    topUrl='"ocean_3_top.jpg"'/>
+        <Background backUrl='"./WorldTextures/ocean_3_back.jpg"'
+                    bottomUrl='"./WorldTextures/ocean_3_bottom.jpg"'
+                    frontUrl='"./WorldTextures/ocean_3_front.jpg"'
+                    leftUrl='"./WorldTextures/ocean_3_left.jpg"'
+                    rightUrl='"./WorldTextures/ocean_3_right.jpg"'
+                    topUrl='"./WorldTextures/ocean_3_top.jpg"'/>
         
         <!-- Domyslny viewport na drodze -->
         <Viewpoint description='Ulica - domyslny' position='10 1.5 -5'/>
@@ -73,7 +73,7 @@
             <Transform scale='3 1 3' translation='-10 0.1 -10'>
                 <Shape>
                     <Appearance>
-                        <ImageTexture url='"lawngrass.jpg"'/>
+                        <ImageTexture url='"./WorldTextures/lawngrass.jpg"'/>
                         <TextureTransform scale='45 45'/>
                     </Appearance>
                     <ElevationGrid creaseAngle='0.785' height='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0' xDimension='8' xSpacing='1.4285714' zDimension='8' zSpacing='0.7142857'/>
@@ -87,7 +87,7 @@
                 <Shape>
                     <Box size='20 0.2 5'/> 
                     <Appearance>
-                        <ImageTexture url='droga.jpg'/>
+                        <ImageTexture url='./WorldTextures/droga.jpg'/>
                         <TextureTransform scale='10 1'/>
                     </Appearance>
                 </Shape> 
@@ -99,102 +99,102 @@
         
         <!-- Piramida -->
         <Transform DEF="Pyramida" translation='20 0 3' scale='1.5 1.5 1.5'>
-            <Inline DEF='PyramidaImport' url='"Pyramida.x3d"' />   
+            <Inline DEF='PyramidaImport' url='"./ElementsWorld-Solid/Pyramida/Pyramida.x3d"' />   
         </Transform>
         
         <!-- Duży stożek, przeźroczysty, odbijający światło, matowy -->
         <Transform DEF='ConeMaterial' translation='-7 0 11'>
-            <Inline DEF='ConeMaterialImport' url='"ConeMaterial.x3d"' />    
+            <Inline DEF='ConeMaterialImport' url='"./ElementsWorld-Solid/ConeMaterial/ConeMaterial.x3d"' />    
         </Transform>
         
         <!-- Mały stożek, nieprzeźroczysty, błyszczący, odbijający światło -->
         <Transform DEF='ConeMaterial2' translation='5.5 0 4.75' rotation='0 1 0 3'>
-            <Inline DEF='ConeMaterial2Import' url='"ConeMaterial2.x3d"' />               
+            <Inline DEF='ConeMaterial2Import' url='"./ElementsWorld-Solid/ConeMaterial2/ConeMaterial2.x3d"' />               
         </Transform>
         
         <!-- Mały stożek, nieprzeźroczysty, matowy, odbijający światło -->
         <Transform DEF='ConeMaterial3' translation='5.5 0 17'>
-            <Inline DEF='ConeMaterial3Import' url='"ConeMaterial3.x3d"' />             
+            <Inline DEF='ConeMaterial3Import' url='"./ElementsWorld-Solid/ConeMaterial3/ConeMaterial3.x3d"' />             
         </Transform>
         
         <!-- Mały stożek, textura z pikseli -->
         <Transform DEF='ConeMaterial4' translation='1 0 11' rotation='0 1 0 3'>
-            <Inline DEF='ConeMaterial4Import' url='"ConeMaterial4.x3d"' />       
+            <Inline DEF='ConeMaterial4Import' url='"./ElementsWorld-Solid/ConeMaterial4/ConeMaterial4.x3d"' />       
         </Transform>
         
         <!-- Dwa stożki połączone podstawami z teksturą -->
         <Transform DEF='Cone2' translation='0 1.4 5' scale='0.4 0.4 0.4'>
-            <Inline DEF='Cone2' url='"Cone2.x3d"' />    
+            <Inline DEF='Cone2' url='"./ElementsWorld-Solid/Cone2/Cone2.x3d"' />    
         </Transform>
 
         <!-- Kręcąca się ziemia, która stoi na stożku -->
         <Transform DEF="Earth" translation="20 0 -10" rotation='0 1 0 3' >
-            <Inline DEF='EarthImport' url='"SphereEarth.x3d"' />      
-        </Transform>     
-        
-        <!-- Przeźroczysty płaski walec -->
-        <Transform DEF='Cylinder3' translation="20 0 -20">
-            <Inline DEF='Cylinder3Import' url='"Cylinder3.x3d"' />      
-        </Transform>
+            <Inline DEF='EarthImport' url='"./ElementsWorld-Solid/SphereEarth/SphereEarth.x3d"' />      
+        </Transform>      
         
         <!-- Walec wraz z misą do przesuwania -->   
         <Transform DEF='Cylinder1' translation='30 1 -10'>
-            <Inline DEF='ImportCylinder' url='"Cylinder.x3d"' />    
+            <Inline DEF='ImportCylinder' url='"./ElementsWorld-Solid/Cylinder/Cylinder.x3d"' />    
         </Transform>
         
         <!-- Walec z teksturą beczki -->   
         <Transform DEF='Cylinder2' translation='15 2 10'>
-            <Inline DEF='ImportCylinder2' url='"Cylinder2.x3d"' />    
+            <Inline DEF='ImportCylinder2' url='"./ElementsWorld-Solid/Cylinder2/Cylinder2.x3d"' />    
+        </Transform>
+		
+		<!-- Przeźroczysty płaski walec -->
+        <Transform DEF='Cylinder3' translation="20 0 -20">
+            <Inline DEF='Cylinder3Import' url='"./ElementsWorld-Solid/Cylinder3/Cylinder3.x3d"' />      
         </Transform>
         
         <!-- Dwa prostopadłościany z kolorowymi texturami -->
         <Transform DEF='BoxWithTexture' translation='30 1 -20'>
-            <Inline DEF='ImportBoxWithTexture' url='"BoxTexture.x3d"' />
+            <Inline DEF='ImportBoxWithTexture' url='"./ElementsWorld-Solid/BoxTexture/BoxTexture.x3d"' />
         </Transform>
 		
-		 <!-- Skrzynia z domyślnymi ustawieniami tekstury -->
+		<!-- Skrzynia z domyślnymi ustawieniami tekstury -->
         <Transform DEF='BoxWithTexture2' translation="24 0.2 -25">
-            <Inline DEF='BoxWithTexture2Import' url='"BoxTexture2.x3d"' />    
+            <Inline DEF='BoxWithTexture2Import' url='"./ElementsWorld-Solid/BoxTexture2/BoxTexture2.x3d"' />    
         </Transform>
         
         <!-- Prostopadłościa wraz z teksturą skrzyni, który się przemieszcza -->
-        <Transform DEF='BOX_TRANSLATE' translation='20 3 -30'>
-            <Inline DEF='ImportBOX_TRANSLATE' url='"BOX_TRANSLATE.x3d"' />
+        <Transform DEF='BoxTranslate' translation='20 3 -30'>
+            <Inline DEF='ImportBOX_TRANSLATE' url='"./ElementsWorld-Solid/BoxTranslate/BoxTranslate.x3d"' />
         </Transform>
         
         <!-- Prostopadłościa z scale(2, 2) na każdej ścianie -->
         <Transform DEF='BoxWithTexture4' translation='20 1 -5'>
-            <Inline DEF='ImportBoxWithTexture4' url='"BoxTexture4.x3d"' />
+            <Inline DEF='ImportBoxWithTexture4' url='"./ElementsWorld-Solid/BoxTexture4/BoxTexture4.x3d"' />
         </Transform>
         
         <!-- Sfera emitująca kolor -->
         <Transform DEF='SphereEmissiveColor' translation='35 1 -15'>
-            <Inline DEF='ImportSphereEmissiveColor' url='"SphereEmissiveColor.x3d"' />
+            <Inline DEF='ImportSphereEmissiveColor' url='"./ElementsWorld-Solid/SphereEmissiveColor/SphereEmissiveColor.x3d"' />
         </Transform>
         
         <!-- Prosta sfera koloru czerwonego -->
         <Transform DEF='SphereDiffuseColor' translation='35 1 -10'>
-            <Inline DEF='SphereDiffuseColor' url='"SphereDiffuseColor.x3d"' />
+            <Inline DEF='SphereDiffuseColor' url='"./ElementsWorld-Solid/SphereDiffuseColor/SphereDiffuseColor.x3d"' />
         </Transform>
         
         <!-- Sfera z trzema lampami, święcącymi światłem spotlight -->
         <Transform DEF='SphereWithLamps' translation='30 0.2 -30'>
-            <Inline DEF='SphereWithLampsImport' url='"SphereWithLamps.x3d"' />    
+            <Inline DEF='SphereWithLampsImport' url='"./ElementsWorld-Solid/SphereWithLamps/SphereWithLamps.x3d"' />    
         </Transform>
 
         <!-- Sfera z trzema lampami, święcącymi światłem spotlight w domku -->
         <Transform DEF='SphereWithLampsInHouse' translation='-7.5 0.2 -23'>
-            <Inline DEF='SphereWithLampsImportInHouse' url='"SphereWithLampsInHouse.x3d"' />    
+            <Inline DEF='SphereWithLampsImportInHouse' url='"./ElementsWorld-Solid/SphereWithLampsInHouse/SphereWithLampsInHouse.x3d"' />    
         </Transform>
 		
         <!-- ElevationGrid - Góry za domkiem -->
         <Transform DEF='SphereWithLampsInHouse' translation='-40 0.1 -40' scale='2 2 2'>
-            <Inline DEF='SphereWithLampsImportInHouse' url='"Grid.x3d"' />    
+            <Inline DEF='SphereWithLampsImportInHouse' url='"./ElementsWorld-Solid/Grid/Grid.x3d"' />    
         </Transform>
         
         <!-- Dom + ustawienia viewports -->
         <Transform DEF='House' translation='0 0 -20'  rotation='0 1 0 1.5708'>
-            <Inline DEF='ImportChalupy' url='"house.x3d"' />
+            <Inline DEF='ImportChalupy' url='"./House/house.x3d"' />
             <Viewpoint description='Przod domu' position='0 1.5 12'/>
             <Viewpoint description='Plac z brylami' orientation='0 1 0 2.35' position='18 1.5 14.5'/>
             <Viewpoint description='Tyl domu' orientation='0 1 0 3.14' position='0 1.5 -20'/>

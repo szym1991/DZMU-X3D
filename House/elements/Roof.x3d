@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 3.0//EN" "http://www.web3d.org/specifications/x3d-3.0.dtd">
+<X3D profile='Immersive' version='3.0' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='http://www.web3d.org/specifications/x3d-3.0.xsd'>
+  <head>
+    <meta content='Roof.x3d' name='title'/>
+    <meta content='Dach' name='description'/>
+  </head>
+  <Scene>
+    <Group>
+      <Transform>
+        <Shape>
+          <Extrusion creaseAngle='3.14' crossSection='-5 5 -5 -5 5 -5 5 5 -5 5' scale='1 1 0.9 0.9 0.8 0.8 0.7 0.7 0.6 0.6 0.5 0.5 0.4 0.4 0.3 0.3 0.2 0.2 0.1 0.1 0.01 0.01' solid='false' spine='0 0 0 0 0.2 0 0 0.4 0 0 0.6 0 0 0.8 0 0 1 0 0 1.2 0 0 1.4 0 0 1.6 0 0 1.8 0 0 2 0'/>
+          <Appearance>
+            <Material diffuseColor='0.9 0.2 0'/>
+            <ImageTexture url='"roof.jpg" "../textures/roof.jpg"'/>
+          </Appearance>
+        </Shape>
+      </Transform>
+    </Group>
+  </Scene>
+</X3D>
