@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 3.3//EN" "http://www.web3d.org/specifications/x3d-3.3.dtd">
+<X3D profile='Interchange' version='3.3' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='http://www.web3d.org/specifications/x3d-3.3.xsd'>
+	<head>
+		<meta content='BoxTexture4.x3d' name='title'/>
+	</head>
+	<Scene>
+		<Transform DEF='barrel' scale='0.2 0.2 0.2'>
+			<Shape>
+				<Appearance>
+					<ImageTexture url='"beczkaGora.png"'/>
+				</Appearance> 
+				<Cylinder bottom='false' height='12' radius='4' side='false'/>
+			</Shape> 
+			<Shape>
+				<Appearance>
+					<ImageTexture url='"beczkaDol.png"'/>
+				</Appearance> 
+				<Cylinder height='12' radius='4' side='false' top='false'/>
+			</Shape> 
+			<Shape>
+				<Appearance>
+					<ImageTexture url='"beczka.png"'/>
+				</Appearance> 
+				<Cylinder bottom='false' height='12' radius='4' top='false'/>
+			</Shape>
+		</Transform>
+		
+		<timeSensor DEF='clock' cycleInterval='8' loop='true'></timeSensor>
+		<orientationInterpolator DEF='spinThings' key='0 0.25 0.5 0.75 1' keyValue='1 1 0 0  1 1 0 1.57079  1 1 0 3.14159  1 1 0 4.71239  1 1 0 6.28317'></orientationInterpolator>
+	
+		<ROUTE fromNode='clock' fromField='fraction_changed' toNode='spinThings' toField='set_fraction'></ROUTE>
+		<ROUTE fromNode='spinThings' fromField='value_changed' toNode='barrel' toField='set_rotation'></ROUTE>
+	</Scene>
+</X3D>

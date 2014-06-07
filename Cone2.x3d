@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 3.3//EN" "http://www.web3d.org/specifications/x3d-3.3.dtd">
+<X3D profile='Interchange' version='3.3' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='http://www.web3d.org/specifications/x3d-3.3.xsd'>
+  <head>
+    <meta content='BoxTexture4.x3d' name='title'/>
+  </head>
+  <Scene>
+    <Transform DEF='cube2' translation='0 1.5 0'>
+            <Shape>
+                <Cone bottom='true' bottomRadius='1.5' height='3' side='true'/>
+                <Appearance>
+					<ImageTexture DEF="metal" url='"metal.jpg"' />
+                </Appearance>
+            </Shape>
+        </Transform>
+        <Transform rotation='0 0 1 3.1415' translation='0 -1.5 0'>
+		
+		<Transform DEF='cube'>
+            <Shape>
+                <Cone bottom='true' bottomRadius='1.5' height='3' side='true'/>
+                <Appearance>
+					<ImageTexture DEF="metal2" url='"metal.jpg"' />
+                </Appearance>
+            </Shape>
+        </Transform>
+        </Transform>
+		
+		<timeSensor DEF='clock' cycleInterval='8' loop='true'></timeSensor>
+    <orientationInterpolator DEF='spinThings' key='0 0.25 0.5 0.75 1' keyValue='0 1 0 0  0 1 0 1.57079  0 1 0 3.14159  0 1 0 4.71239  0 1 0 6.28317'></orientationInterpolator>
+    <orientationInterpolator DEF='spinThings2' key='0 0.25 0.5 0.75 1' keyValue='0 1 0 0  0 1 0 -1.57079  0 1 0 -3.14159  0 1 0 -4.71239  0 1 0 -6.28317'></orientationInterpolator>
+	
+	<ROUTE fromNode='clock' fromField='fraction_changed' toNode='spinThings' toField='set_fraction'></ROUTE>
+	<ROUTE fromNode='clock' fromField='fraction_changed' toNode='spinThings2' toField='set_fraction'></ROUTE>
+    <ROUTE fromNode='spinThings' fromField='value_changed' toNode='cube' toField='set_rotation'></ROUTE>
+    <ROUTE fromNode='spinThings2' fromField='value_changed' toNode='cube2' toField='set_rotation'></ROUTE>
+  </Scene>
+</X3D>

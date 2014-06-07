@@ -14,7 +14,7 @@
         />
         <!-- Zdefiniowanie dwoch trybow nawigacji: chodzenia i latania. -->
         <NavigationInfo headlight='false' speed='8' type='"WALK" "FLY"'/>
-		
+        
         <!-- Zdefiniowanie otaczajacego swiata - nieba -->
         <Background backUrl='"ocean_3_back.jpg"'
                     bottomUrl='"ocean_3_bottom.jpg"'
@@ -22,27 +22,27 @@
                     leftUrl='"ocean_3_left.jpg"'
                     rightUrl='"ocean_3_right.jpg"'
                     topUrl='"ocean_3_top.jpg"'/>
-		
+        
         <!-- Domyslny viewport na drodze -->
         <Viewpoint description='Ulica - domyslny' position='10 1.5 -5'/>
-		
+        
         <!-- Imitacja swiatla slonecznego. -->
         <DirectionalLight DEF='SunLight' ambientIntensity='1' direction='-0.4 -0.8 -0.7'/>
         <PositionInterpolator DEF='LightDirection' key='0 0.1 0.5 0.9 1' keyValue='0.8 -0.2 -0.2 0.8 -0.2 -0.2 0 -1 -0.2 -0.8 -0.2 -0.2 -0.8 -0.2 -0.2'/>
 
         <!-- Lampa punktowa nadajaca swiatlo we wszystkich kierunkach. -->
-		<!-- LampLight ROUTE:  [from Toggle.on_changed to set_on ] -->
-		<PointLight DEF='LampLight' color='0.6 0.6 0.6' location='-5 3.4 -20' radius='15' on='true'/>
-		<Transform DEF='Lampa' translation='-5 3.42 -20' scale='0.15 0.15 0.15'>
+        <!-- LampLight ROUTE:  [from Toggle.on_changed to set_on ] -->
+        <PointLight DEF='LampLight' color='0.6 0.6 0.6' location='-5 3.4 -20' radius='15' on='true'/>
+        <Transform DEF='Lampa' translation='-5 3.42 -20' scale='0.15 0.15 0.15'>
             <Shape>
                 <Appearance>
-					<!-- MAT2 ROUTE:  [from Toggle.emissiveColor_changed to set_emissiveColor ]-->
+                    <!-- MAT2 ROUTE:  [from Toggle.emissiveColor_changed to set_emissiveColor ]-->
                     <Material DEF='MAT2' diffuseColor='1 1 1' emissiveColor='1 1 1' specularColor='0 1 0'/>
                 </Appearance>
                 <Sphere/>
             </Shape>>
         </Transform>
-		<Transform scale='0.01 0.3 0.01' translation='-5 3.70 -20'>
+        <Transform scale='0.01 0.3 0.01' translation='-5 3.70 -20'>
             <Shape>
                 <Appearance>
                     <Material color='0.2 0.2 0.2'/>
@@ -50,22 +50,22 @@
                 <Cylinder/>
             </Shape>
         </Transform>
-		<Transform translation='-5.45 1.5 -21.75' rotation='0 1 0 1.5708'>
+        <Transform translation='-5.45 1.5 -21.75' rotation='0 1 0 1.5708'>
             <Shape>
                 <Sphere radius='0.05'/>
                 <Appearance DEF='bellap'>
-					<!-- MAT ROUTE:  [from Toggle.diffuseColor_changed to set_diffuseColor ] -->
+                    <!-- MAT ROUTE:  [from Toggle.diffuseColor_changed to set_diffuseColor ] -->
                     <Material DEF='MAT' diffuseColor='1 0 0'/>
                 </Appearance>
             </Shape>
-			<!-- LightSwitch ROUTE:  [from isActive to Toggle.set_active ] -->
-			<TouchSensor DEF='LightSwitch'/>
+            <!-- LightSwitch ROUTE:  [from isActive to Toggle.set_active ] -->
+            <TouchSensor DEF='LightSwitch'/>
             <Shape>
                 <Box size='0.2 0.15 0.05'/>
                 <Appearance>
                      <Material diffuseColor='0.5 0.5 0.5'/>
-				</Appearance>
-			</Shape>	
+                </Appearance>
+            </Shape>    
         </Transform>
 
         <!-- Trawnik -->
@@ -80,33 +80,23 @@
                 </Shape>
             </Transform>
         </Transform>
-		
+        
         <!-- Droga -->
-        <Transform scale='3 1 1' translation='10 0.1 0'>
-            <Group DEF='Droga'>
+        <Transform scale='3 1 1' translation='10 0.04 0'>
+            <Group DEF='Road'>
                 <Shape>
                     <Box size='20 0.2 5'/> 
-                    <Appearance DEF='GreyAppearance'>
-                        <Material diffuseColor='0.4 0.4 0.4'/>
+                    <Appearance>
+                        <ImageTexture url='droga.jpg'/>
+                        <TextureTransform scale='10 1'/>
                     </Appearance>
                 </Shape> 
-                <Transform translation='0 0.1 0.2'>
-                    <Shape DEF='Linia'>
-                        <Box size='20 0.01 0.2'/> 
-                        <Appearance DEF='WhiteAppearance'>
-                            <Material diffuseColor='1 1 1' emissiveColor='0.5 0.5 0.5'/>
-                        </Appearance>
-                    </Shape>
-                </Transform> 
-                <Transform translation='0 0.1 -0.3'>
-                    <Shape USE='Linia'/>
-                </Transform>
             </Group>
         </Transform> 
-        <Transform scale='3 1 1' translation='10 0.1 -10' rotation='0 1 0 1.5708'>
-            <Group USE='Droga'/>
+        <Transform scale='3 1 1' translation='10 0.08 -10' rotation='0 1 0 1.5708'>
+            <Group USE='Road'/>
         </Transform>
-		
+        
         <!-- Piramida -->
         <Transform translation='20 0 3' scale='1.5 1.5 1.5'>
             <Shape DEF="Pyramida">
@@ -119,31 +109,36 @@
                 </Appearance>
             </Shape>
         </Transform>
-		
+        
         <!-- Duży stożek, przeźroczysty, odbijający światło, matowy -->
         <Transform DEF='ConeMaterial' translation='-7 0 11'>
             <Inline DEF='ConeMaterialImport' url='"ConeMaterial.x3d"' />    
         </Transform>
-		
+        
         <!-- Mały stożek, nieprzeźroczysty, błyszczący, odbijający światło -->
         <Transform DEF='ConeMaterial2' translation='5.5 0 4.75' rotation='0 1 0 3'>
             <Inline DEF='ConeMaterial2Import' url='"ConeMaterial2.x3d"' />  
             <timeSensor DEF='clock3' cycleInterval='8' loop='true'></timeSensor>
-            <orientationInterpolator DEF='spinThings3' key='0 0.25 0.5 0.75 1' keyValue='0 1 0 6.28317 0 1 0 4.71239  0 1 0 3.14159 0 1 0 1.57079 0 1 0 0'></orientationInterpolator>				
+            <orientationInterpolator DEF='spinThings3' key='0 0.25 0.5 0.75 1' keyValue='0 1 0 6.28317 0 1 0 4.71239  0 1 0 3.14159 0 1 0 1.57079 0 1 0 0'></orientationInterpolator>               
         </Transform>
-		
+        
         <!-- Mały stożek, nieprzeźroczysty, matowy, odbijający światło -->
         <Transform DEF='ConeMaterial3' translation='5.5 0 17'>
             <Inline DEF='ConeMaterial3Import' url='"ConeMaterial3.x3d"' />
             <timeSensor DEF='clock4' cycleInterval='8' loop='true'></timeSensor>
-            <orientationInterpolator DEF='spinThings4' key='0 0.25 0.5 0.75 1' keyValue='0 1 0 6.28317 0 1 0 4.71239  0 1 0 3.14159 0 1 0 1.57079 0 1 0 0'></orientationInterpolator>				
+            <orientationInterpolator DEF='spinThings4' key='0 0.25 0.5 0.75 1' keyValue='0 1 0 6.28317 0 1 0 4.71239  0 1 0 3.14159 0 1 0 1.57079 0 1 0 0'></orientationInterpolator>               
         </Transform>
-		
+        
         <!-- Mały stożek, textura z pikseli -->
         <Transform DEF='ConeMaterial4' translation='1 0 11' rotation='0 1 0 3'>
             <Inline DEF='ConeMaterial4Import' url='"ConeMaterial4.x3d"' />
             <timeSensor DEF='clock2' cycleInterval='8' loop='true'></timeSensor>
-            <orientationInterpolator DEF='spinThings2' key='0 0.25 0.5 0.75 1' keyValue='0 1 0 0  0 1 0 1.57079  0 1 0 3.14159  0 1 0 4.71239  0 1 0 6.28317'></orientationInterpolator>			
+            <orientationInterpolator DEF='spinThings2' key='0 0.25 0.5 0.75 1' keyValue='0 1 0 0  0 1 0 1.57079  0 1 0 3.14159  0 1 0 4.71239  0 1 0 6.28317'></orientationInterpolator>            
+        </Transform>
+        
+        <!-- Dwa stożki połączone podstawami z teksturą -->
+        <Transform DEF='Cone2' translation='0 1.4 5' scale='0.4 0.4 0.4'>
+            <Inline DEF='Cone2' url='"Cone2.x3d"' />    
         </Transform>
 
         <!-- Kręcąca się ziemia, która stoi na stożku -->
@@ -170,7 +165,7 @@
             <timeSensor DEF='clock' cycleInterval='8' loop='true'></timeSensor>
             <orientationInterpolator DEF='spinThings' key='0 0.25 0.5 0.75 1' keyValue='0 1 0 0  0 1 0 1.57079  0 1 0 3.14159  0 1 0 4.71239  0 1 0 6.28317'></orientationInterpolator>
         </group>
-		
+        
         <!-- Przeźroczysty płaski walec -->
         <Transform translation="20 0 -20">
             <Shape>
@@ -180,27 +175,37 @@
                 </Appearance>
             </Shape> 
         </Transform>
-		
+        
         <!-- Walec wraz z misą do przesuwania -->   
         <Transform DEF='Cylinder1' translation='30 1 -10'>
             <Inline DEF='ImportCylinder' url='"cylinder.x3d"' />    
+        </Transform>
+        
+        <!-- Walec z teksturą beczki -->   
+        <Transform DEF='Cylinder2' translation='15 2 10'>
+            <Inline DEF='ImportCylinder2' url='"Cylinder2.x3d"' />    
         </Transform>
         
         <!-- Dwa prostopadłościany z kolorowymi texturami -->
         <Transform DEF='BoxWithTexture' translation='30 1 -20'>
             <Inline DEF='ImportBoxWithTexture' url='"BoxTexture.x3d"' />
         </Transform>
-		
+        
         <!-- Prostopadłościa wraz z teksturą skrzyni, który się przemieszcza -->
         <Transform DEF='BOX_TRANSLATE' translation='20 3 -30'>
             <Inline DEF='ImportBOX_TRANSLATE' url='"BOX_TRANSLATE.x3d"' />
         </Transform>
-		
+        
+        <!-- Prostopadłościa z scale(2, 2) na każdej ścianie -->
+        <Transform DEF='BoxWithTexture2' translation='20 1 -5'>
+            <Inline DEF='ImportBoxWithTexture2' url='"BoxTexture4.x3d"' />
+        </Transform>
+        
         <!-- Sfera emitująca kolor -->
         <Transform DEF='SphereEmissiveColor' translation='35 1 -15'>
             <Inline DEF='ImportSphereEmissiveColor' url='"SphereEmissiveColor.x3d"' />
         </Transform>
-		
+        
         <!-- Prosta sfera koloru czerwonego -->
         <Transform DEF='SphereDiffuseColor' translation='35 1 -10'>
             <Inline DEF='SphereDiffuseColor' url='"SphereDiffuseColor.x3d"' />
@@ -221,16 +226,16 @@
                 <Box />
             </Shape>
         </Transform>
-		
+        
 
         <!-- Dom + ustawienia viewports -->
 
-		<!-- Sfera z trzema lampami, święcącymi światłem spotlight w domku -->
-		<Transform DEF='SphereWithLampsInHouse' translation='-7.5 0.2 -23'>
+        <!-- Sfera z trzema lampami, święcącymi światłem spotlight w domku -->
+        <Transform DEF='SphereWithLampsInHouse' translation='-7.5 0.2 -23'>
             <Inline DEF='SphereWithLampsImportInHouse' url='"SphereWithLampsInHouse.x3d"' />    
         </Transform>
-		
-		<!-- Dom + ustawienia viewports -->
+        
+        <!-- Dom + ustawienia viewports -->
         <Transform DEF='House' translation='0 0 -20'  rotation='0 1 0 1.5708'>
             <Inline DEF='ImportChalupy' url='"house.x3d"' />
             <Viewpoint description='Przod domu' position='0 1.5 12'/>
@@ -256,37 +261,37 @@
         <ROUTE fromNode='clock4' fromField='fraction_changed' toNode='spinThings4' toField='set_fraction'></ROUTE>
         <ROUTE fromNode='spinThings4' fromField='value_changed' toNode='ConeMaterial3' toField='set_rotation'></ROUTE>
         <!-- Toggle ROUTEs:  [from LightSwitch.isActive to set_active ] [from on_changed to LampLight.set_on ] [from diffuseColor_changed to MAT.set_diffuseColor] [from set_emissiveColor_changed to MAT2.set_emissiveColor] -->
-		<Script DEF='Toggle'>
-		<field name='on' type='SFBool' value='true' accessType='initializeOnly'/>
-		<field name='set_active' type='SFBool' accessType='inputOnly'/>
-		<field name='on_changed' type='SFBool' accessType='outputOnly'/>
-		<field name='diffuseColor_changed' type='SFColor' accessType='outputOnly'/>
-		<field name='diffuseColor_changed2' type='SFColor' accessType='outputOnly'/>
-		<field name='emissiveColor_changed' type='SFColor' accessType='outputOnly'/>
-		<![CDATA[ 
-		ecmascript:
-				function set_active( b, tm ) {
-					// ignore button releases
-					if ( b == FALSE ) return;
+        <Script DEF='Toggle'>
+        <field name='on' type='SFBool' value='true' accessType='initializeOnly'/>
+        <field name='set_active' type='SFBool' accessType='inputOnly'/>
+        <field name='on_changed' type='SFBool' accessType='outputOnly'/>
+        <field name='diffuseColor_changed' type='SFColor' accessType='outputOnly'/>
+        <field name='diffuseColor_changed2' type='SFColor' accessType='outputOnly'/>
+        <field name='emissiveColor_changed' type='SFColor' accessType='outputOnly'/>
+        <![CDATA[ 
+        ecmascript:
+                function set_active( b, tm ) {
+                    // ignore button releases
+                    if ( b == FALSE ) return;
 
-					// toggle on button presses
-					if ( on == TRUE ){ 
-						on = FALSE; 
-						diffuseColor_changed = new SFColor(0,0,1);
-						emissiveColor_changed = new SFColor(0,0,0);
-					}
-					else  {            
-						on = TRUE; 
-						diffuseColor_changed = new SFColor(1,0,0); 
-						emissiveColor_changed = new SFColor(1,1,1);						
-					}
-					on_changed = on;
-				}
-		]]>
+                    // toggle on button presses
+                    if ( on == TRUE ){ 
+                        on = FALSE; 
+                        diffuseColor_changed = new SFColor(0,0,1);
+                        emissiveColor_changed = new SFColor(0,0,0);
+                    }
+                    else  {            
+                        on = TRUE; 
+                        diffuseColor_changed = new SFColor(1,0,0); 
+                        emissiveColor_changed = new SFColor(1,1,1);                     
+                    }
+                    on_changed = on;
+                }
+        ]]>
         </Script>
         <ROUTE fromNode='LightSwitch' fromField='isActive' toNode='Toggle' toField='set_active'/>
         <ROUTE fromNode='Toggle' fromField='on_changed' toNode='LampLight' toField='set_on'/>
-		<ROUTE fromNode='Toggle' fromField='diffuseColor_changed' toNode='MAT' toField='set_diffuseColor'/>
-		<ROUTE fromNode='Toggle' fromField='emissiveColor_changed' toNode='MAT2' toField='set_emissiveColor'/>		
+        <ROUTE fromNode='Toggle' fromField='diffuseColor_changed' toNode='MAT' toField='set_diffuseColor'/>
+        <ROUTE fromNode='Toggle' fromField='emissiveColor_changed' toNode='MAT2' toField='set_emissiveColor'/>      
     </Scene>
 </X3D> 
