@@ -6,14 +6,7 @@
         <meta name='title' content='house.x3d'/>
         <meta name='description' content='Dom'/>
         <meta name='audio files' content='dooorbell.wav'/>
-        <meta name='identifier' content=' https://savage.nps.edu/Savage/Buildings/HouseBarisAktop/House.x3d '/>
-        <meta name='generator' content='X3D-Edit 3.2, https://savage.nps.edu/X3D-Edit'/>
-        <meta name='license' content=' ../../license.html'/>
     </head>
-    <!--
-    Index for DEF nodes: backDoor, backDoorClock, backDoorClockClose, backDoorKnub, backDoorknubOut, backDoorPathClose, backDoorPathOpen, backDoorTouchClose, backDoorTouchOpen, backgr, backside, backsidewall1, backsidewall12, backsidewall13, backsidewall2, backsidewall3, backsidewall4, backsideWindow1, backsideWindow2, backwall41, backwall42, backwall5, backWindow1, backWindow1Clock, backWindow1Clock2, backWindow1Close, backWindow1Knub, backWindow1Knub2, backWindow1KnubClose, backWindow1KnubOpen, backWindow1Open, backWindow1Pos, backWindow1Pos2, backWindow2, backWindow2Clock, backWindow2Clock2, backWindow2Close, backWindow2Knub, backWindow2Knub2, backWindow2KnubClose, backWindow2KnubOpen, backWindow2Open, backWindow2Pos, backWindow2Pos2, BASIN, bathroomDoor, bathroomDoorClock, bathroomDoorClockClose, bathroomDoorKnub, bathroomDoorknubOut, bathroomDoorPathClose, bathroomDoorPathOpen, bathroomDoorTouchClose, bathroomDoorTouchOpen, bell, bellap, chair, chair1, chair2, Clock, ClockClose, Cover, DOOR, door, doorbell, doorKnub, doorPathClose, doorPathOpen, fence, floor, floorandceiling, floorapp, floorshape, front, garden, innerWalls, knub_ap, knubOut, lawn, lawnAndTree, left, leftside, leftsidewall1, leftsidewall11, leftsidewall12, leftsidewall2, leftsidewall21, leftsidewall22, leftsidewall3, leftsidewall31, leftsidewall32, leftsidewall4, leftWindow1, leftWindow1Clock, leftWindow1Clock2, leftWindow1Close, leftWindow1Knub, leftWindow1Knub2, leftWindow1KnubClose, leftWindow1KnubOpen, leftWindow1Open, leftWindow1Pos, leftWindow1Pos2, leftWindow2, leftWindow2Clock, leftWindow2Clock2, leftWindow2Close, leftWindow2Knub, leftWindow2Knub2, leftWindow2KnubClose, leftWindow2KnubOpen, leftWindow2Open, leftWindow2Pos, leftWindow2Pos2, leftWindow3, leftWindow3Clock, leftWindow3Clock2, leftWindow3Close, leftWindow3Knub, leftWindow3Knub2, leftWindow3KnubClose, leftWindow3KnubOpen, leftWindow3Open, leftWindow3Pos, leftWindow3Pos2, leftWindowOne, leftWindowThree, leftWindowTwo, part1, part11, part12, part13, part21, part3, part31, part32, part33, point1, rightside, rightsidewall1, rightsidewall11, rightsidewall12, rightsidewall2, rightsidewall21, rightsidewall22, rightsidewall23, rightsidewall3, rightsidewall31, rightsidewall4, rightWindow1, rightWindow1Clock, rightWindow1Clock2, rightWindow1Close, rightWindow1Knub, rightWindow1Knub2, rightWindow1KnubClose, rightWindow1KnubOpen, rightWindow1Open, rightWindow1Pos, rightWindow1Pos2, rightWindow2, rightWindow2Clock, rightWindow2Clock2, rightWindow2Close, rightWindow2Knub, rightWindow2Knub2, rightWindow2KnubClose, rightWindow2KnubOpen, rightWindow2Open, rightWindow2Pos, rightWindow2Pos2, rightWindow3, rightWindowOne, rightWindowThree, rightWindowTwo, roof, table, touchClose, touchOpen, up, wall_ap, wall1, wall11, wall12, wall13, wall2, wall3, wall31, wall32, wall33, WINDOW1, window1, window1Knub, window1knubopen, WINDOW2, window2, window2Knub, window2knubopen, window2Slide, windowApp, windowSlide, wood
-    Index for Viewpoint images: point1, Viewpoint_2, Viewpoint_3, Viewpoint_4, Viewpoint_5, Viewpoint_6, Viewpoint_7, Viewpoint_8, Viewpoint_9, Viewpoint_10, Viewpoint_11, Viewpoint_12, Viewpoint_13, Viewpoint_14, Viewpoint_15, Viewpoint_16, Viewpoint_17
-    -->
     <Scene>
         <Group DEF='front'>
             <Transform DEF='wall1' translation='-3.75 2 0'>
@@ -169,7 +162,7 @@
            url=' "./elements/doorbell.wav" '/>
                 </Sound>
                 <!-- bell ROUTE:  [from touchTime to doorbell.set_startTime ] -->
-                <TouchSensor DEF='bell' description='touch to ring doorbell'/>
+                <TouchSensor DEF='bell' description='Zadzwon do drzwi'/>
                 <ROUTE fromNode='bell' fromField='touchTime' toNode='doorbell' toField='set_startTime'/>
             </Transform>
         </Group>
@@ -552,9 +545,3 @@
         </Group>
     </Scene>
 </X3D>
-<!--
-Index for DEF nodes: backDoor, backDoorClock, backDoorClockClose, backDoorKnub, backDoorknubOut, backDoorPathClose, backDoorPathOpen, backDoorTouchClose, backDoorTouchOpen, backgr, backside, backsidewall1, backsidewall12, backsidewall13, backsidewall2, backsidewall3, backsidewall4, backsideWindow1, backsideWindow2, backwall41, backwall42, backwall5, backWindow1, backWindow2, BASIN, bathroomDoor, bathroomDoorClock, bathroomDoorClockClose, bathroomDoorKnub, bathroomDoorknubOut, bathroomDoorPathClose, bathroomDoorPathOpen, bathroomDoorTouchClose, bathroomDoorTouchOpen, bell, bellap, chair, chair1, chair2, Clock, ClockClose, Cover, DOOR, door, doorbell, doorKnub, doorPathClose, doorPathOpen, fence, floor, floorandceiling, floorapp, floorshape, front, garden, innerWalls, knub_ap, knubOut, lawn, lawnAndTree, left, leftside, leftsidewall1, leftsidewall11, leftsidewall12, leftsidewall2, leftsidewall21, leftsidewall22, leftsidewall3, leftsidewall31, leftsidewall32, leftsidewall4, leftWindow1, leftWindow2, leftWindow3, leftWindowOne, leftWindowThree, leftWindowTwo, part1, part11, part12, part13, part21, part3, part31, part32, part33, point1, rightside, rightsidewall1, rightsidewall11, rightsidewall12, rightsidewall2, rightsidewall21, rightsidewall22, rightsidewall23, rightsidewall3, rightsidewall31, rightsidewall4, rightWindow1, rightWindow2, rightWindow3, rightWindowOne, rightWindowThree, rightWindowTwo, roof, table, touchClose, touchOpen, up, wall_ap, wall1, wall11, wall12, wall13, wall2, wall3, wall31, wall32, wall33, WINDOW1, window1, window1Knub, window1knubopen, WINDOW2, window2, window2Knub, window2knubopen, window2Slide, windowApp, windowSlide, wood
-Index for Viewpoint images: point1, Viewpoint_2, Viewpoint_3, Viewpoint_4, Viewpoint_5, Viewpoint_6, Viewpoint_7, Viewpoint_8, Viewpoint_9, Viewpoint_10, Viewpoint_11, Viewpoint_12, Viewpoint_13, Viewpoint_14, Viewpoint_15, Viewpoint_16, Viewpoint_17
--->
-
-<!-- Color key: <X3dNode DEF='idName' field='value'/> matches <XmlElement DEF='idName' attribute='value'/> -->

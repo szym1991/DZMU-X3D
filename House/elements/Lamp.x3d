@@ -33,7 +33,7 @@
                 </Appearance>
             </Shape>
             <!-- LightSwitch ROUTE:  [from isActive to Toggle.set_active ] -->
-            <TouchSensor DEF='LightSwitch'/>
+            <TouchSensor DEF='LightSwitch' description='Kliknij aby zapalic lub zgasic swiatlo'/>
             <Shape>
                 <Box size='0.2 0.15 0.05'/>
                 <Appearance>
