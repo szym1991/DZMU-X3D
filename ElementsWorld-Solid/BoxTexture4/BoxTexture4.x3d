@@ -5,6 +5,7 @@
     <meta content='BoxTexture4.x3d' name='title'/>
   </head>
   <Scene>
+  <Transform scale='0.6 0.6 0.6'>
     <Shape>
       <Box size='3.2 1.8 3.2'/>
       <Appearance>
@@ -13,5 +14,6 @@
 		<TextureTransform scale='2 2'/>
       </Appearance>
     </Shape>
+	</Transform>
   </Scene>
 </X3D>

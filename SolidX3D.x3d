@@ -129,8 +129,8 @@
             <Inline DEF='ImportBOX_TRANSLATE' url='"./ElementsWorld-Solid/BoxTranslate/BoxTranslate.x3d"' />
         </Transform>
         
-        <!-- Prostopadłościa z scale(2, 2) na każdej ścianie -->
-        <Transform DEF='BoxWithTexture4' translation='20 1 -5'>
+        <!-- Prostopadłościan z scale(2, 2) na każdej ścianie -->
+        <Transform DEF='BoxWithTexture4' translation='20 0.6 -5'>
             <Inline DEF='ImportBoxWithTexture4' url='"./ElementsWorld-Solid/BoxTexture4/BoxTexture4.x3d"' />
         </Transform>
         
