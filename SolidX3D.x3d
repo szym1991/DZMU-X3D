@@ -70,22 +70,22 @@
         </Transform>
         
         <!-- Duży stożek, przeźroczysty, odbijający światło, matowy -->
-        <Transform DEF='ConeMaterial' translation='-7 0 11'>
+        <Transform DEF='ConeMaterial' translation='-7 4.5 11'>
             <Inline DEF='ConeMaterialImport' url='"./ElementsWorld-Solid/ConeMaterial/ConeMaterial.x3d"' />    
         </Transform>
         
         <!-- Mały stożek, nieprzeźroczysty, błyszczący, odbijający światło -->
-        <Transform DEF='ConeMaterial2' translation='5.5 0 4.75' rotation='0 1 0 3'>
+        <Transform DEF='ConeMaterial2' translation='5.5 1 4.75' rotation='0 1 0 3'>
             <Inline DEF='ConeMaterial2Import' url='"./ElementsWorld-Solid/ConeMaterial2/ConeMaterial2.x3d"' />               
         </Transform>
         
         <!-- Mały stożek, nieprzeźroczysty, matowy, odbijający światło -->
-        <Transform DEF='ConeMaterial3' translation='5.5 0 17'>
+        <Transform DEF='ConeMaterial3' translation='5.5 0.5 17'>
             <Inline DEF='ConeMaterial3Import' url='"./ElementsWorld-Solid/ConeMaterial3/ConeMaterial3.x3d"' />             
         </Transform>
         
         <!-- Mały stożek, textura z pikseli -->
-        <Transform DEF='ConeMaterial4' translation='1 0 11' rotation='0 1 0 3'>
+        <Transform DEF='ConeMaterial4' translation='1 2 11' rotation='0 1 0 3'>
             <Inline DEF='ConeMaterial4Import' url='"./ElementsWorld-Solid/ConeMaterial4/ConeMaterial4.x3d"' />       
         </Transform>
         

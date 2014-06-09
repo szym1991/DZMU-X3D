@@ -8,7 +8,7 @@
 <Scene>
 	<Transform DEF='ConeMaterial3' translation='0 1.5 0'>
 		<Shape>
-			<Cone height='5' bottomRadius='1' solid='true'/>
+			<Cone height='4' bottomRadius='0.75' solid='true'/>
 			<Appearance>
 				<Material ambientIntensity='0.256' diffuseColor='0.029158 0.026292 0.026964' shininess='0.061224' specularColor='0.641609 0.651044 0.979592'/>
 			</Appearance>
