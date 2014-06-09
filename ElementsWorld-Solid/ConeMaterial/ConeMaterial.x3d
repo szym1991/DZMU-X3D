@@ -3,7 +3,7 @@
 <X3D profile='Interchange' version='3.3'  xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation =' http://www.web3d.org/specifications/x3d-3.3.xsd '>
 <head>
 <meta name='title' content='ConeMaterial.x3d'/>
-<meta name='description' content='Stożek błyszczący, który odbija światło i jest przeźroczysty'/>
+<meta name='description' content='Stożek błyszczący, który odbija światło i jest przeźroczysty w stopniu 0.2'/>
 </head>
 <Scene>
 	<Shape>

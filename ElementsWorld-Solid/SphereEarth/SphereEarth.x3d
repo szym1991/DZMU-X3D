@@ -7,7 +7,6 @@
 </head>
 <Scene>
 	<Transform DEF="earth" translation="0 1.5 0" rotation='0 1 0 3'>
-        <SpotLight ambientIntensity="0.5" beamWidth="2.570796" cutOffAngle="0.393" direction="0 1 1" location="-2 0 0 " radius="16" />
         <Shape>
             <Sphere/>
                 <Appearance>
@@ -19,7 +18,6 @@
 		<orientationInterpolator DEF='spinThingsEarth' key='0 0.25 0.5 0.75 1' keyValue='0 1 0 0  0 1 0 1.57079  0 1 0 3.14159  0 1 0 4.71239  0 1 0 6.28317'></orientationInterpolator>
     </Transform>
     <Transform translation='0 0 0' DEF="cone" rotation="0 2 1 0">
-        <SpotLight beamWidth='0.1745' color='0.8 0.8 0.2' cutOffAngle='0.7837' radius='10' global="true"/> 
         <Shape>
             <Cone height='1'/>
             <Appearance>
