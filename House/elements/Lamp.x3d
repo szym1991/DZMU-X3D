@@ -3,6 +3,7 @@
 <X3D profile='Interchange' version='3.3' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='http://www.web3d.org/specifications/x3d-3.3.xsd'>
     <head>
         <meta content='Lamp.x3d' name='title'/>
+		<meta content='Lampa w domku - swiatlo punktowe' name='description'/>
     </head>
     <Scene>
 		<!-- LampLight ROUTE:  [from Toggle.on_changed to set_on ] -->
